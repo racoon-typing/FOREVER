@@ -1,0 +1,13 @@
+.map {
+    &__wrapper {
+        width: 100%;
+        max-width: $mobile-width;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    &__card-wrap {
+        min-height: 200px;
+    }
+}

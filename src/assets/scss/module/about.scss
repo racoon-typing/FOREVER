@@ -1,0 +1,20 @@
+.about {
+    &__wrapper {
+        width: 100%;
+        max-width: $mobile-width;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    &__link {
+        background-color: transparent;
+        border-radius: $border-radius;
+        border: 1px solid $color-six;
+        color: $color-text-fisrt;
+        padding: 10px 30px;
+        text-decoration: none;
+    }
+
+
+}

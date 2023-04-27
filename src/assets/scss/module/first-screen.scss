@@ -1,0 +1,28 @@
+.first-screen {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        padding-top: 60px;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: $mobile-width;
+        min-height: 400px;
+        margin: 0 auto;
+        // background-image: url('../img/content/back.jpeg');
+        background-color: $color-main;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &__text {
+        margin: 0;
+        text-align: center;
+    }
+}
