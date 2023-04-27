@@ -21,6 +21,7 @@
 
         .swiper-button-prev,
         .swiper-button-next {
+            position: absolute;
             width: 50px;
             height: 50px;
             background-color: $color-third;
@@ -43,6 +44,17 @@
 
         .swiper-button-next {
             right: 0;
+
+            .swiper-button-icon {
+                rotate: 180deg;
+            }
+        }
+
+        .swiper-button-icon {
+            width: 11px;
+            height: 20px;
+            fill: $color-text-second;
+            color: $color-text-second;
         }
 
         &-img {
@@ -61,5 +73,16 @@
                 margin: 0;
             }
         }
+    }
+
+    &__link {
+        width: max-content;
+        display: block;
+        padding: 6px 30px;
+        margin-top: 30px;
+        border-radius: $border-radius;
+        color: $color-text-second;
+        background-color: $color-fifth;
+        text-decoration: none;
     }
 }
