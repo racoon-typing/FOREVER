@@ -203,7 +203,7 @@
                     Отзывы
                 </h2>
 
-
+                <!-- Слайдер -->
                 <div class="reviews__slider">
                     <!-- Slider main container -->
                     <div class="swiper">
@@ -245,6 +245,35 @@
                 </h2>
 
                 <!-- Слайдер -->
+                <div class="offers__slider">
+                    <!-- Slider main container -->
+                    <div class="swiper swiper-2" id="swiper-2">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- 1 -->
+                            <div class="swiper-slide">
+                                <img src="assets/img/content/offers/offer-1.jpeg" alt="" class="offers__slider-img">
+                            </div>
+
+                            <!-- 2 -->
+                            <div class="swiper-slide">
+                                <img src="assets/img/content/offers/offer-2.jpeg" alt="" class="offers__slider-img">
+                            </div>
+
+                            <!-- 3 -->
+                            <div class="swiper-slide">
+                                <img src="assets/img/content/offers/offer-3.jpeg" alt="" class="offers__slider-img">
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <!-- <div class="swiper-pagination"></div> -->
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                    </div>
+                </div>
 
 
                 <a href="" class="offers__link">
@@ -317,6 +346,7 @@
 
     @@include("tpl/footer.html")
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
