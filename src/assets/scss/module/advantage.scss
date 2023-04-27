@@ -17,9 +17,18 @@
         background-color: $color-six;
         padding: 30px 20px;
         margin-bottom: 10px;
+        border-radius: $border-radius;
 
         &:last-child {
             margin-bottom: 0;
+        }
+
+        &-number {
+            margin: 0;
+            font-size: 40px;
+            color: $color-text-third;
+            margin-bottom: 20px;
+            font-weight: 800;
         }
 
         &-text {

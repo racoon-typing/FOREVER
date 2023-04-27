@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- <link rel="stylesheet" href="assets/css/style.min.css"> -->
 
+    <!-- Свайпер -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <title>FOREVER: элитная недвижимость</title>
 </head>
 
@@ -80,7 +84,9 @@
                 </h2>
 
                 <p class="first-screen__text">
-                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
+                    стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник
+                    создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
                 </p>
             </div>
         </section>
@@ -93,15 +99,21 @@
                     О компании
                 </h2>
 
-                <img src="" alt="Фото: о нас" class="about__img">
+                <img src="assets/img/content/back.jpeg" alt="Фото: о нас" class="about__img">
 
                 <div class="about__content">
                     <p class="about__content-text">
-                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
+                        стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный
+                        печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки
+                        образцов.
                     </p>
 
                     <p class="about__content-text">
-                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
+                        стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный
+                        печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки
+                        образцов.
                     </p>
                 </div>
 
@@ -179,6 +191,10 @@
                 <ul class="advantage__list">
                     <!-- 1 -->
                     <li class="advantage__item">
+                        <p class="advantage__item-number">
+                            01
+                        </p>
+
                         <p class="advantage__item-text">
                             Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
                         </p>
@@ -186,6 +202,10 @@
 
                     <!-- 2 -->
                     <li class="advantage__item">
+                        <p class="advantage__item-number">
+                            02
+                        </p>
+
                         <p class="advantage__item-text">
                             Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
                         </p>
@@ -193,6 +213,10 @@
 
                     <!-- 3 -->
                     <li class="advantage__item">
+                        <p class="advantage__item-number">
+                            03
+                        </p>
+
                         <p class="advantage__item-text">
                             Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
                         </p>
@@ -200,6 +224,10 @@
 
                     <!-- 4 -->
                     <li class="advantage__item">
+                        <p class="advantage__item-number">
+                            04
+                        </p>
+
                         <p class="advantage__item-text">
                             Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
                         </p>
@@ -207,6 +235,10 @@
 
                     <!-- 5 -->
                     <li class="advantage__item">
+                        <p class="advantage__item-number">
+                            05
+                        </p>
+
                         <p class="advantage__item-text">
                             Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
                         </p>
@@ -214,6 +246,10 @@
 
                     <!-- 6 -->
                     <li class="advantage__item">
+                        <p class="advantage__item-number">
+                            06
+                        </p>
+
                         <p class="advantage__item-text">
                             Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
                         </p>
@@ -230,15 +266,35 @@
                     Отзывы
                 </h2>
 
-                <ul class="reviews__list">
-                    <!-- 1 -->
-                    <li class="reviews__item">
 
-                    </li>
-                </ul>
+                <div class="reviews__slider">
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="" alt="" class="reviews__slider-img">
+                            </div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                    </div>
+                </div>
+
 
                 <p class="reviews__text">
-                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
+                    стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник
+                    создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
                 </p>
             </div>
         </section>

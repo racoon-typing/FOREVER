@@ -5,6 +5,7 @@
     width: 100%;
     // background-color: $color-main;
     background-color: transparent;
+    z-index: 3;
 
     &__wrapper {
         display: flex;

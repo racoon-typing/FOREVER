@@ -6,4 +6,12 @@
         margin: 0 auto;
         padding: 20px;
     }
+
+    &__slider {
+        width: 100%;
+
+        .swiper {
+            width: 100%;
+        }
+    }
 }

@@ -1,5 +1,6 @@
 .first-screen {
     &__wrapper {
+        position: relative;
         display: flex;
         flex-direction: column;
         padding: 0 20px;
@@ -9,19 +10,36 @@
         box-sizing: border-box;
         width: 100%;
         max-width: $mobile-width;
-        min-height: 400px;
+        min-height: 500px;
         margin: 0 auto;
-        // background-image: url('../img/content/back.jpeg');
+        background-image: url('../img/content/first-screen/bg-content-2.jpeg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         background-color: $color-main;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: .6);
+        }
     }
 
     &__title {
+        position: relative;
+        z-index: 2;
         margin: 0;
         margin-bottom: 30px;
         text-align: center;
     }
 
     &__text {
+        position: relative;
+        z-index: 2;
         margin: 0;
         text-align: center;
     }
