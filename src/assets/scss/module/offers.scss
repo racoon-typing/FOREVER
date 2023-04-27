@@ -12,21 +12,53 @@
 
         .swiper {
             width: 100%;
-            height: 250px;
         }
 
         .swiper-wrapper {
-            padding-top: 40px;
+            padding-top: 60px;
         }
 
         .swiper-button-prev,
         .swiper-button-next {
-            width: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: $color-third;
+            border-radius: 50%;
+            top: 0;
+            margin-top: 0;
+            background-position: center;
+            background-image: url('../img/icon/arrow.svg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        .swiper-button-prev {
+            left: calc(100% - 110px);
+        }
+
+        .swiper-button-next {
+            right: 0;
         }
 
         &-img {
+            display: block;
             width: 100%;
             min-height: 250px;
+            object-fit: cover;
+        }
+
+        &-info {
+            background-color: $color-six;
+            color: $color-text-second;
+            padding: 15px;
+
+            &-text {
+                margin: 0;
+            }
         }
     }
 }
