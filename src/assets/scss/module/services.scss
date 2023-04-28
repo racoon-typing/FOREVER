@@ -34,7 +34,7 @@
         flex-direction: column;
         justify-content: space-between;
         margin-bottom: 10px;
-        background: linear-gradient(90deg, $gradient-first, $gradient-second);
+        background-color: $color-fifth;
 
         &-icon {
             width: 50px;
