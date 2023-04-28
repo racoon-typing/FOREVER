@@ -43,5 +43,24 @@
         z-index: 2;
         margin: 0;
         text-align: center;
+
+        &--first {
+            position: relative;
+            display: inline-block;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 1px;
+                bottom: 2px;
+                left: 0;
+                background-color: $color-six;
+            }
+        }
+
+        &--second {
+            font-weight: 800;
+        }
     }
 }

@@ -13,10 +13,40 @@
     }
 
     &__img {
+        display: block;
         width: 100%;
         min-height: 200px;
         margin-bottom: 15px;
         border-radius: $border-radius;
+
+        &-wrapper {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: #000000, $alpha: .3);
+            }
+        }
+
+        &-title {
+            margin: 0;
+            position: absolute;
+            top: 10%;
+            left: 5%;
+        }
+
+        &-text {
+            margin: 0;
+            position: absolute;
+            top: 25%;
+            left: 5%;
+        }
+
     }
 
     &__content {

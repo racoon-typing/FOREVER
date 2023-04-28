@@ -32,15 +32,19 @@
             font-weight: 800;
         }
 
-        &-title {
-            margin: 0;
-            color: $color-text-second;
-            margin-bottom: 15px;
-        }
+        // &-title {
+        //     margin: 0;
+        //     color: $color-text-second;
+        //     margin-bottom: 15px;
+        // }
 
         &-text {
             margin: 0;
             color: $color-text-second;
+
+            &--allocated {
+                color: $color-seven;
+            }
         }
     }
 }
