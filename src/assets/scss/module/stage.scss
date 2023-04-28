@@ -1,4 +1,7 @@
 .stage {
+    background-color: $color-six;
+    color: $color-text-second;
+
     &__wrapper {
         width: 100%;
         max-width: $mobile-width;
@@ -32,10 +35,6 @@
 
         &:last-child {
             padding-bottom: 0;
-
-            // &::before {
-            //     display: none;
-            // }
         }
 
         &::before {
@@ -44,23 +43,25 @@
             width: 2px;
             height: 100%;
             top: 0;
-            left: 30px;
-            background-color: $color-six;
-            z-index: -1;
+            left: 33px;
+            background-color: $color-seven;
         }
 
         &-number {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background-color: $color-fifth;
+            background-color: $color-six;
+            border: 3px solid $color-seven;
             color: $color-text-second;
             margin-right: 20px;
             font-size: 20px;
             font-weight: 800;
+            z-index: 2;
         }
 
         &-title {

@@ -16,19 +16,6 @@
         padding-bottom: 30px;
         background-color: $color-fourth;
         z-index: 2;
-
-        &::before {
-            position: absolute;
-            content: '';
-            width: 30px;
-            height: 30px;
-            background-color: $color-six;
-            rotate: 45deg;
-            bottom: -26px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: -1;
-        }
     }
 
     &__card-wrap {

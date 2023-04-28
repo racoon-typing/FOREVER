@@ -3,7 +3,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    // background-color: $color-main;
     background-color: transparent;
     z-index: 3;
 
@@ -37,7 +36,7 @@
     &__link {
         display: block;
         padding: 12px 20px;
-        background-color: $color-fifth;
+        background-color: $color-third;
         color: $color-text-second;
         border-radius: $border-radius;
         text-decoration: none;
