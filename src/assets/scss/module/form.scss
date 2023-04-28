@@ -1,11 +1,24 @@
 .form {
     &__wrapper {
+        position: relative;
         width: 100%;
         max-width: $mobile-width;
         box-sizing: border-box;
         margin: 0 auto;
-        padding: 20px;
+        padding: 30px 20px;
         background-color: $color-six;
+        padding-top: 50px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 30px;
+            height: 30px;
+            rotate: 45deg;
+            background-color: $color-fourth;
+            top: -15px;
+            left: 10%;
+        }
     }
 
     &__title {

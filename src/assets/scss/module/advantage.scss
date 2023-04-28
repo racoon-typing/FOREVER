@@ -4,7 +4,7 @@
         max-width: $mobile-width;
         box-sizing: border-box;
         margin: 0 auto;
-        padding: 20px;
+        padding: 30px 20px;
     }
 
     &__list {
@@ -14,7 +14,7 @@
     }
     
     &__item {
-        background-color: $color-six;
+        background-color: $color-fifth;
         padding: 30px 20px;
         margin-bottom: 10px;
         border-radius: $border-radius;
@@ -26,9 +26,16 @@
         &-number {
             margin: 0;
             font-size: 40px;
-            color: $color-text-third;
+            line-height: 40px;
+            color: $color-text-fisrt;
             margin-bottom: 20px;
             font-weight: 800;
+        }
+
+        &-title {
+            margin: 0;
+            color: $color-text-second;
+            margin-bottom: 15px;
         }
 
         &-text {
