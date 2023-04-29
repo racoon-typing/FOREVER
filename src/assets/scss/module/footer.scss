@@ -41,15 +41,29 @@
                 position: relative;
                 color: $color-text-fisrt;
                 text-decoration: none;
-
+                
                 &::before {
                     position: absolute;
                     content: '';
-                    width: 100%;
-                    height: 1px;
+                    width: 0;
+                    height: 1.5px;
                     bottom: -2px;
                     left: 0;
                     background-color: $color-six;
+                }
+
+                &:hover {
+                    &::before {
+                        width: 100%;
+                        transition: width 0.35s;
+                    }
+                }
+
+                &:active {
+                    &::before {
+                        width: 100%;
+                        background-color: $color-fifth;
+                    }
                 }
             }
         }

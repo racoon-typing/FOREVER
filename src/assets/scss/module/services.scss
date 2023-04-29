@@ -55,3 +55,27 @@
         }
     }
 }
+
+@media (min-width: $tablet-width) {
+    .services {
+        &__wrapper {
+            max-width: $tablet-width;
+            padding: 40px 30px;
+        }
+
+        &__title {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        &__list {
+            gap: 15px;
+        }
+
+        &__item {
+            &-title {
+                font-size: 20px;
+            }
+        }
+    }
+}

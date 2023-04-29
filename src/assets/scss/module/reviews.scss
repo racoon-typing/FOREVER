@@ -46,6 +46,21 @@
         &-text {
             margin: 0;
             color: $color-text-second;
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .reviews {
+        &__wrapper {
+            max-width: $tablet-width;
+            padding: 40px 30px;
+        }
+
+        &__title {
+            font-size: 30px;
+            margin-bottom: 30px;
         }
     }
 }

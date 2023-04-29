@@ -4,11 +4,6 @@ const swiper = new Swiper('#swiper-2', {
     direction: 'horizontal',
     loop: true,
 
-    // If we need pagination
-    // pagination: {
-    //   el: '.swiper-pagination',
-    // },
-
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
@@ -18,8 +13,8 @@ const swiper = new Swiper('#swiper-2', {
     breakpoints: {
         // when window width is >= 768px
         768: {
-          slidesPerView: 3,
-          spaceBetween: 30
+          slidesPerView: 2,
+          spaceBetween: 20
         },
     }
 

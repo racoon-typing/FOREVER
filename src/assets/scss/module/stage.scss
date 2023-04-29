@@ -12,7 +12,7 @@
 
     &__title {
         margin: 0;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     &__text {
@@ -71,6 +71,43 @@
 
         &-text {
             margin: 0;
+        }
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .stage {
+        &__wrapper {
+            max-width: $tablet-width;
+            padding: 40px 30px;
+        }
+
+        &__title {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        &__item {
+            padding-bottom: 40px;
+
+            &::before {
+                left: 43px;
+            }
+
+            &-number {
+                width: 80px;
+                height: 80px;
+                font-size: 24px;
+            }
+
+            &-title {
+                font-size: 24px;
+            }
+
+            &-text {
+                font-size: 20px;
+                line-height: 1.5;
+            }
         }
     }
 }

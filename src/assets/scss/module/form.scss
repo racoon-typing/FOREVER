@@ -75,5 +75,17 @@
         border: none;
         min-height: 40px;
         margin-top: 10px;
+        font-size: 16px;
+        line-height: 16px;
+
+        &:hover {
+            background-color: darken($color: $color-fifth, $amount: 5%);
+            color: $color-text-second;
+        }
+
+        &:active {
+            background-color: $color-six;
+            border: 2px solid $color-fifth;
+        }
     }
 }
