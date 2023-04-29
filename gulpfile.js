@@ -39,21 +39,24 @@ const path = {
         css: distPath + "assets/css/",
         js: distPath + "assets/js/",
         images: distPath + "assets/img/",
-        fonts: distPath + "assets/fonts/"
+        fonts: distPath + "assets/fonts/",
+        php: distPath + "assets/php/"
     },
     src: {
         html: srcPath + "*.html",
         css: srcPath + "assets/scss/*.scss",
         js: srcPath + "assets/js/*.js",
         images: srcPath + "assets/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp,webmanifest,xml,json}",
-        fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
+        fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
+        php: srcPath + "assets/php/*.php"
     },
     watch: {
         html: srcPath + "**/*.html",
         js: srcPath + "assets/js/**/*.js",
         css: srcPath + "assets/scss/**/*.scss",
         images: srcPath + "assets/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp,webmanifest,xml,json}",
-        fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
+        fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
+        php: srcPath + "assets/php/**/*.php",
     },
     clean: "./" + distPath
 }
@@ -167,15 +170,21 @@ function clean() {
     return del(path.clean)
 }
 
+function php() {
+    return src(path.src.php)
+        .pipe(dest(path.build.php))
+}
+
 function watchFiles() {
     gulp.watch([path.watch.html], html)
     gulp.watch([path.watch.css], css)
     gulp.watch([path.watch.js], js)
     gulp.watch([path.watch.images], images)
     gulp.watch([path.watch.fonts], fonts)
+    gulp.watch([path.watch.php], php)
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, webpImages, fonts))
+const build = gulp.series(clean, gulp.parallel(html, css, js, images, webpImages, fonts, php))
 const watch = gulp.parallel(build, watchFiles, serve)
 
 
