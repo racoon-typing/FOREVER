@@ -1,7 +1,6 @@
 .offers {
     &__wrapper {
         width: 100%;
-        max-width: $mobile-width;
         box-sizing: border-box;
         margin: 0 auto;
         padding: 30px 0;
@@ -99,7 +98,7 @@
 @media (min-width: $tablet-width) {
     .offers {
         &__wrapper {
-            max-width: $tablet-width;
+            max-width: 900px;
             padding: 40px 30px;
         }
 
@@ -112,6 +111,28 @@
             &-img {
                 min-height: 400px;
             }
+        }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .offers {
+        &__wrapper {
+            padding: 80px 80px;
+            max-width: $desktop-width;
+        }
+
+        &__title {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        &__link {
+            width: 240px;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            margin-top: 40px;
         }
     }
 }

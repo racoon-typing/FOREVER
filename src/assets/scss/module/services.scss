@@ -1,7 +1,6 @@
 .services {
     &__wrapper {
         width: 100%;
-        max-width: $mobile-width;
         box-sizing: border-box;
         margin: 0 auto;
         padding: 30px 20px;
@@ -59,7 +58,7 @@
 @media (min-width: $tablet-width) {
     .services {
         &__wrapper {
-            max-width: $tablet-width;
+            max-width: 900px;
             padding: 40px 30px;
         }
 
@@ -77,6 +76,36 @@
 
             &-title {
                 font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .services {
+        &__wrapper {
+            padding: 80px 80px;
+            max-width: $desktop-width;
+        }
+
+        &__title {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            gap: 0;
+        }
+
+        &__item {
+            margin-right: 30px;
+            min-height: 200px;
+
+            &:last-child {
+                margin-right: 0;
             }
         }
     }

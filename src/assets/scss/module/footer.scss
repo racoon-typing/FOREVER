@@ -1,7 +1,6 @@
 .footer {
     &__wrapper {
         width: 100%;
-        max-width: $mobile-width;
         box-sizing: border-box;
         margin: 0 auto;
         padding: 30px 20px;
@@ -118,7 +117,7 @@
             display: grid;
             grid-template-columns: 1fr 40%;
             column-gap: 80px;
-            max-width: $tablet-width;
+            max-width: 900px;
             padding: 40px 30px;
         }
 
@@ -166,5 +165,35 @@
                 }
             }
         }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .footer {
+        &__wrapper {
+            padding: 80px 80px;
+            max-width: $desktop-width;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__content {
+            width: 30%;
+        }
+
+        &__contacts {
+            width: 30%;
+            
+            &-item {
+                &-title {
+                    font-size: 18px;
+                }
+
+                &-text {
+                    font-size: 16px;
+                }
+            }
+        }
+        
     }
 }

@@ -72,10 +72,11 @@ const swiper = new Swiper('#swiper-2', {
           slidesPerView: 2,
           spaceBetween: 20
         },
+
+        1440: {
+          slidesPerView: 4,
+          spaceBetween: 40
+        },
     }
 
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
 });
