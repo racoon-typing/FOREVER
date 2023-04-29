@@ -211,10 +211,31 @@
 @media (min-width: $tablet-width) {
     .header {
         &__wrapper {
-            padding: 10px 30px;
+            padding: 15px 30px;
 
             &-content {
                 max-width: $tablet-width;
+            }
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__link {
+            font-size: 16px;
+            line-height: 16px;
+        }
+
+        &__menu {
+            &-nav {
+                &-item {
+                    &-link {
+                        font-size: 22px;
+                        line-height: 22px;
+                        padding: 30px 0;
+                    }
+                }
             }
         }
     }

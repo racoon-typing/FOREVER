@@ -61,5 +61,35 @@
             }
         }
     }
+}
 
+@media (min-width: $tablet-width) {
+    .map {
+        &__wrapper {
+            max-width: $tablet-width;
+            padding: 40px 0;
+        }
+
+        &__title {
+            font-size: 30px;
+            margin-bottom: 30px;
+            padding: 0 30px;
+        }
+
+        &__card-wrap {
+            min-height: 400px;
+        }
+
+        &__content {
+            &-item {
+                &-title {
+                    font-size: 26px
+                }
+
+                &-text {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 }
