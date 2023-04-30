@@ -77,20 +77,23 @@
         margin-top: 30px;
         border-radius: $border-radius;
         color: $color-text-fisrt;
-        border: 1px solid $color-six;
+        border: 1px solid $color-nine;
         border-radius: $border-radius;
         text-decoration: none;
         margin-left: 20px;
         font-size: 18px;
         line-height: 18px;
-
+       
         &:hover {
-            background-color: $color-six;
+            background-color: $color-third;
+            border: 1px solid $color-third;
             color: $color-text-second;
         }
-
+        
         &:active {
-            background-color: $color-fifth;
+            background-color: darken($color: $color-third, $amount: 10%);
+            border: 1px solid $color-third;
+            color: $color-text-second;
         }
     }
 }

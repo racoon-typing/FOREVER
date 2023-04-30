@@ -65,7 +65,7 @@
         width: max-content;
         background-color: transparent;
         border-radius: $border-radius;
-        border: 1px solid $color-six;
+        border: 1px solid $color-nine;
         color: $color-text-fisrt;
         padding: 14px 30px;
         text-decoration: none;
@@ -74,12 +74,15 @@
         line-height: 18px;
 
         &:hover {
-            background-color: $color-six;
+            background-color: $color-third;
+            border: 1px solid $color-third;
             color: $color-text-second;
         }
-
+        
         &:active {
-            background-color: $color-fifth;
+            background-color: darken($color: $color-third, $amount: 10%);
+            border: 1px solid $color-third;
+            color: $color-text-second;
         }
     }
 }

@@ -18,7 +18,7 @@
     }
     
     &__item {
-        background-color: $color-six;
+        background-color: $color-second;
         padding: 30px 20px;
         margin-bottom: 10px;
         border-radius: $border-radius;
@@ -31,17 +31,17 @@
             margin: 0;
             font-size: 40px;
             line-height: 40px;
-            color: $color-seven;
+            color: $color-text-fourth;
             margin-bottom: 20px;
             font-weight: 800;
         }
 
         &-text {
             margin: 0;
-            color: $color-text-second;
+            color: $color-text-fisrt;
 
             &--allocated {
-                color: $color-seven;
+                color: $color-text-fourth;
             }
         }
     }
