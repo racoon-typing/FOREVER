@@ -29,15 +29,18 @@
         }
     }
 
-    &__title {
+    &__logo {
+        display: block;
         margin: 0;
-        font-size: 20px;
-        text-transform: uppercase;
         text-decoration: none;
         cursor: pointer;
-        font-size: 20px;
-        font-weight: 800;
-        color: $color-six;
+
+        &-img {
+            display: block;
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
     }
 
     &__link {
@@ -205,22 +208,25 @@
             }
         }
     }
-
 }
 
 
 @media (min-width: $tablet-width) {
     .header {
         &__wrapper {
-            padding: 15px 30px;
+            padding: 5px 30px;
+            padding-top: 10px;
 
             &-content {
                 max-width: $tablet-width;
             }
         }
 
-        &__title {
-            font-size: 24px;
+        &__logo {
+            &-img {
+                width: 60px;
+                height: 60px;
+            }
         }
 
         &__link {
