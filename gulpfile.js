@@ -48,7 +48,7 @@ const path = {
         js: srcPath + "assets/js/*.js",
         images: srcPath + "assets/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
-        php: srcPath + "assets/php/*.php"
+        php: srcPath + "assets/php/**/*.*"
     },
     watch: {
         html: srcPath + "**/*.html",
@@ -56,7 +56,7 @@ const path = {
         css: srcPath + "assets/scss/**/*.scss",
         images: srcPath + "assets/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
-        php: srcPath + "assets/php/**/*.php",
+        php: srcPath + "assets/php/**/*.*",
     },
     clean: "./" + distPath
 }
