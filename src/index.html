@@ -656,12 +656,12 @@
                         Форма заявки
                     </h2>
 
-                    <form class="form__user" action="assets/php/mail.php" method="POST" id="form">
+                    <form class="form__user" method="POST" id="form" onsubmit="send(event, './assets/php/send.php')">
                         <!-- Имя -->
                         <input class="form__input" type="text" id="name" name="name" placeholder="Имя:">
 
                         <!-- Почта -->
-                        <input class="form__input form__input-email" type="email" id="email" name="e-mail"
+                        <input class="form__input form__input-email" type="email" id="email" name="email"
                             placeholder="E-mail:">
 
                         <!-- Телефон -->

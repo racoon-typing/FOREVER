@@ -1,37 +1,75 @@
 <?php
-/* Здесь проверяется существование переменных */
-if (isset($_POST['name'])) {$name = $_POST['name'];}
-if (isset($_POST['e-mail'])) {$email = $_POST['e-mail'];}
-if (isset($_POST['tel'])) {$tel = $_POST['tel'];}
-if (isset($_POST['message'])) {$message = $_POST['message'];}
- 
-/* Сюда впишите свою эл. почту */
-$myaddres  = "eo18622@yandex.ru"; // кому отправляем
- 
-/* А здесь прописывается текст сообщения, \n - перенос строки */
-$mes = "Тема: Заказ обратного звонка!\nИмя: $name\nТелефон: $tel\Почта: $email\nСообщение: $message";
- 
-/* А эта функция как раз занимается отправкой письма на указанный вами email */
-$sub='Заказ'; //сабж
-$email='Заказ обратного звонка'; // от кого
-$send = mail ($myaddres,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email");
- 
-ini_set('short_open_tag', 'On');
-header('Refresh: 3; URL=index.html');
-?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="3; url=index.html">
-<title>Спасибо! Мы свяжемся с вами!</title>
-<meta name="generator">
-<script type="text/javascript">
-setTimeout('location.replace("../../index.html")', 3000);
-/*Изменить текущий адрес страницы через 3 секунды (3000 миллисекунд)*/
-</script> 
-</head>
-<body>
-<h1>Спасибо! Мы свяжемся с вами!</h1>
-</body>
-</html>
+// Файлы phpmailer
+require 'phpmailer/PHPMailer.php';
+require 'phpmailer/SMTP.php';
+require 'phpmailer/Exception.php';
+
+// TcPpPt5ltA4&
+
+
+// Переменные, которые отправляет пользователь
+$name = $_POST['name'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$comment = $_POST['comment'];
+
+// Формирование самого письма
+$title = "Заявка с сайта";
+$body = "
+<h2>Новое письмо</h2>
+<b>Имя:</b> $name<br>
+<b>Имя:</b> $phone<br>
+<b>Почта:</b> $email<br><br>
+<b>Сообщение:</b><br>$comment
+";
+
+// Настройки PHPMailer
+$mail = new PHPMailer\PHPMailer\PHPMailer();
+try {
+    $mail->isSMTP();   
+    $mail->CharSet = "UTF-8";
+    $mail->SMTPAuth   = true;
+    //$mail->SMTPDebug = 2;
+    $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
+
+    // Настройки вашей почты
+    $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
+    $mail->Username   = 'test_tester_2023@mail.ru'; // Логин на почте
+    $mail->Password   = 'x6uVwYbT63gjpqQJJhbn'; // Пароль на почте
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port       = 465;
+    $mail->setFrom('test_tester_2023@mail.ru', 'Даниил'); // Адрес самой почты и имя отправителя
+
+    // Получатель письма
+    $mail->addAddress('eo18622l@yandex.ru');  
+    // $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
+
+    // Прикрипление файлов к письму
+if (!empty($file['name'][0])) {
+    for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
+        $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
+        $filename = $file['name'][$ct];
+        if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
+            $mail->addAttachment($uploadfile, $filename);
+            $rfile[] = "Файл $filename прикреплён";
+        } else {
+            $rfile[] = "Не удалось прикрепить файл $filename";
+        }
+    }   
+}
+// Отправка сообщения
+$mail->isHTML(true);
+$mail->Subject = $title;
+$mail->Body = $body;    
+
+// Проверяем отравленность сообщения
+if ($mail->send()) {$result = "success";} 
+else {$result = "error";}
+
+} catch (Exception $e) {
+    $result = "error";
+    $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
+}
+
+// Отображение результата
+echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
