@@ -1,3 +1,5 @@
+// const formNode = document.querySelectorAll('#form');
+
 // Отправка данных на сервер
 function send(event, php){
 console.log("Отправка запроса");
@@ -13,6 +15,9 @@ req.onload = function() {
     	if (json.result == "success") {
     		// Если сообщение отправлено
     		alert("Сообщение отправлено");
+
+			// Очистка формы
+			event.target.reset();		 
     	} else {
     		// Если произошла ошибка
     		alert("Ошибка. Сообщение не отправлено");

@@ -38,25 +38,25 @@ try {
     $mail->Password   = 'x6uVwYbT63gjpqQJJhbn'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('test_tester_2023@mail.ru', 'Даниил'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('test_tester_2023@mail.ru', 'Сайт Forever'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('eo18622l@yandex.ru');  
+    $mail->addAddress('dannil.suvorov.97@bk.ru');  
     // $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
 
     // Прикрипление файлов к письму
-if (!empty($file['name'][0])) {
-    for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
-        $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
-        $filename = $file['name'][$ct];
-        if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
-            $mail->addAttachment($uploadfile, $filename);
-            $rfile[] = "Файл $filename прикреплён";
-        } else {
-            $rfile[] = "Не удалось прикрепить файл $filename";
-        }
-    }   
-}
+// if (!empty($file['name'][0])) {
+//     for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
+//         $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
+//         $filename = $file['name'][$ct];
+//         if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
+//             $mail->addAttachment($uploadfile, $filename);
+//             $rfile[] = "Файл $filename прикреплён";
+//         } else {
+//             $rfile[] = "Не удалось прикрепить файл $filename";
+//         }
+//     }   
+// }
 // Отправка сообщения
 $mail->isHTML(true);
 $mail->Subject = $title;
@@ -72,4 +72,5 @@ else {$result = "error";}
 }
 
 // Отображение результата
+header('Location: ./assets/php/thanks.html');
 echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);

@@ -710,13 +710,13 @@
 
                     <form class="form__user" method="POST" id="form" onsubmit="send(event, './assets/php/send.php')">
                         <!-- Имя -->
-                        <input class="form__input" type="text" id="name" name="name" placeholder="Имя:">
+                        <input class="form__input" type="text" id="name" name="name" placeholder="Имя:" required>
 
                         <!-- Почта -->
-                        <input class="form__input form__input-email" type="email" id="email" name="email" placeholder="E-mail:">
+                        <input class="form__input form__input-email" type="email" id="email" name="email" placeholder="E-mail:" required>
 
                         <!-- Телефон -->
-                        <input class="form__input form__input-tel" type="tel" id="phone" name="phone" placeholder="+7 (999) 99 99 99">
+                        <input class="form__input form__input-tel" type="tel" id="phone" name="phone" placeholder="+7 (999) 99 99 99" required>
 
                         <!-- Сообщение -->
                         <textarea class="form__textarea" id="comment" name="comment" placeholder="Комментарий"></textarea>
