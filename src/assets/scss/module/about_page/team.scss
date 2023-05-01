@@ -1,4 +1,4 @@
-.gallery {
+.team {
     &__wrapper {
         width: 100%;
         box-sizing: border-box;
@@ -20,8 +20,12 @@
         }
 
         .swiper-wrapper {
-            padding-bottom: 60px;
+            padding-top: 60px;
             border-radius: $border-radius;
+        }
+
+        .swiper-slide {
+            background-color: $color-second;
         }
 
         .swiper-button-prev,
@@ -31,8 +35,7 @@
             height: 50px;
             background-color: $color-third;
             border-radius: 50%;
-            top: unset;
-            bottom: 0;
+            top: 0;
             margin-top: 0;
             background-position: center;
             background-image: url('../img/icon/arrow.svg');
@@ -69,22 +72,44 @@
             min-height: 300px;
             object-fit: cover;
         }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px 20px;
+            min-height: 120px;
+            box-sizing: border-box;
+        }
+
+        &-position {
+            margin: 0;
+            font-size: 24px;
+            color: $color-text-fourth;
+        }
+
+        &-name {
+            margin: 0;
+        }
     }
 }
 
+@media (min-width: $tablet-width) {
+    .team {
+        &__wrapper {
+            max-width: 900px;
+            padding: 40px 30px;
+        }
 
-// @media (min-width: $tablet-width) {
-//     .main {
-//         &--about {
-//             padding-top: 75px;
-//         }
-//     }
-// }
+        &__title {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
 
-// @media (min-width: $desktop-width) {
-//     .main {
-//         &--about {
-//             padding-top: 90px;
-//         }
-//     }
-// }
+        &__slider {
+            &-content {        
+                min-height: 180px;
+            }
+        }
+    }
+}

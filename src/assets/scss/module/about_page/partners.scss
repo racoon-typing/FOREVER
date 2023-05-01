@@ -1,0 +1,30 @@
+.partners {
+    &__wrapper {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 30px 20px;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        margin: 0;
+
+        &--tablet {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .partners {
+        &__wrapper {
+            max-width: 900px;
+            padding: 40px 30px;
+        }
+    }
+}
