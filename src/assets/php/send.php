@@ -4,8 +4,6 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-// TcPpPt5ltA4&
-
 
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
@@ -72,5 +70,4 @@ else {$result = "error";}
 }
 
 // Отображение результата
-header('Location: ./assets/php/thanks.html');
 echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
