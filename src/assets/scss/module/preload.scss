@@ -37,8 +37,8 @@
         height: 100%;
         box-sizing: border-box;
         border-radius: 50%;
-        border: 10px solid $color-second;
-        border-top: 10px solid $color-six;
+        border: 5px solid $color-second;
+        border-top: 5px solid $color-six;
         animation: spin 2s linear infinite;
 
         &-number {
