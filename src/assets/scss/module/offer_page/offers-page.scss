@@ -76,6 +76,28 @@
     }
 
     &__button {
+        width: 100%;
+        min-height: 40px;
+        font-size: 18px;
+        line-height: 18px;
+
+        &-loading {
+            display: flex;
+            margin-bottom: 10px;
+
+            &-bullet {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $color-six;
+                margin-right: 5px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
         &-wrapper {
             display: flex;
             flex-direction: column;
