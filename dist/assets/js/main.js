@@ -107,6 +107,40 @@ const swiper3 = new Swiper('#swiper-3', {
   }
 
 });
+
+const swiper4 = new Swiper('#swiper-4', {
+
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // Буллеты
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  // navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  // },
+
+  // breakpoints: {
+  //     // when window width is >= 768px
+  //     768: {
+  //       slidesPerView: 3,
+  //       spaceBetween: 20
+  //     },
+
+  //     1440: {
+  //       slidesPerView: 4,
+  //       spaceBetween: 40
+  //     },
+  // }
+
+});
 // const formNode = document.querySelectorAll('#form');
 
 // Отправка данных на сервер
@@ -150,25 +184,20 @@ req.send(new FormData(event.target));
 }
 const persentsNode = document.querySelector('.preload__icon-number');
 const preloadNode = document.querySelector('.preload')
+const pageBodyNode = document.querySelector('.page__body')
+const TIME_LOAD = 3000;
 
+let time = 0;
 document.addEventListener("DOMContentLoaded", () => {
-    // const mediaFiles = document.querySelectorAll('img', 'video');
-    // let i = 0;
-    
-    // Array.from(mediaFiles).forEach((file, index) => {
-    //     file.onload = () => {
-    //         i++;
-
-    //         persentsNode.innerHTML = `${Math.floor((i * 100) / mediaFiles.length)}%`;
-
-    //         if (i === mediaFiles.length) {
-    //             persentsNode.classList.add('preload--none');
-    //             persentsNode.innerHTML = '100%';
-    //         }
-    //     }
-    // });
-
-    preloadNode.classList.add('preload--none');
-    console.log('Загрузилось')
-
+    const persentsInterval = setInterval(() => {
+        if (time <= TIME_LOAD) {
+            persentsNode.innerHTML = `${Math.ceil(time / TIME_LOAD * 100)}%`;
+            time += 750;
+        } else {
+            clearInterval(persentsInterval);
+            preloadNode.classList.add('preload--none');
+            pageBodyNode.style.overflow = 'auto';
+        }
+    }, 750);
+    persentsInterval();
 });

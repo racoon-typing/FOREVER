@@ -1,14 +1,16 @@
 .preload {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     background-color: $color-fourth;
     z-index: 3;
+    opacity: 1;
+    transition: all 1s ease-out;
 
     &--none {
-        display: none;
+        opacity: 0;
+        z-index: -10;
     }
 
     &__wrapper {
@@ -25,7 +27,15 @@
         width: 140px;
         height: 140px;
         object-fit: cover;
-        margin-bottom: 40px;
+        margin-bottom: 12px;
+    }
+
+    &__name {
+        display: block;
+        color: $color-text-fourth;
+        font-size: 30px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
     }
 
     &__icon {
