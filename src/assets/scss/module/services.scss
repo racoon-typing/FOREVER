@@ -1,4 +1,10 @@
 .services {
+    display: none;
+    background-image: url('../img/content/services/bg-content-1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
     &__wrapper {
         width: 100%;
         box-sizing: border-box;
@@ -15,11 +21,12 @@
         padding: 0;
         margin: 0;
         list-style-type: none;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        flex-direction: column;
         box-sizing: border-box;
+        border: 1px solid $color-six;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        backdrop-filter: blur(3px);
+        border-radius: 5%/50%;
+        padding: 20px;
     }
 
     &__item {
@@ -27,17 +34,18 @@
         width: 100%;
         min-height: 120px;
         border-radius: $border-radius;
-        padding: 10px;
+        padding: 15px 30px;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: space-between;
-        background-color: $color-nine;
 
         &-icon {
             width: 50px;
             height: 50px;
             margin-bottom: 10px;
+            color: $color-text-fisrt;
         }
 
         &:nth-child(2) {
@@ -49,7 +57,8 @@
 
         &-title {
             margin: 0;
-            color: $color-text-second;
+            color: $color-text-fisrt;
+            text-align: center;
             font-size: 18px;
         }
     }
