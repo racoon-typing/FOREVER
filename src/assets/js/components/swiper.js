@@ -1,59 +1,32 @@
-const swiper2 = new Swiper('#swiper-2', {
-
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    breakpoints: {
-        // when window width is >= 768px
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20
-        },
-
-        1440: {
-          slidesPerView: 4,
-          spaceBetween: 40
-        },
-    }
-
-});
-
-const swiper3 = new Swiper('#swiper-3', {
-
+// Слайдер с навигацией сверху
+const swiper1 = new Swiper('#swiper-1', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
 
   // Navigation arrows
   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 
   breakpoints: {
-      // when window width is >= 768px
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
 
-      1440: {
-        slidesPerView: 4,
-        spaceBetween: 40
-      },
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    },
   }
 
 });
 
-const swiper4 = new Swiper('#swiper-4', {
-
+// Слайдер с пагинацией снизу
+const swiper2 = new Swiper('#swiper-2', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
@@ -64,24 +37,33 @@ const swiper4 = new Swiper('#swiper-4', {
     type: 'bullets',
     clickable: true,
   },
+});
+
+
+const swiper3 = new Swiper('#swiper-3', {
+
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
 
   // Navigation arrows
-  // navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  // },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
-  // breakpoints: {
-  //     // when window width is >= 768px
-  //     768: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 20
-  //     },
+  breakpoints: {
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
 
-  //     1440: {
-  //       slidesPerView: 4,
-  //       spaceBetween: 40
-  //     },
-  // }
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    },
+  }
 
 });
+
