@@ -65,7 +65,7 @@ function serve() {
     browserSync.init({
         server: {
             baseDir: "./" + distPath
-        }
+        },
     });
 }
 
@@ -186,7 +186,6 @@ function watchFiles() {
 
 const build = gulp.series(clean, gulp.parallel(html, css, js, images, webpImages, fonts, php))
 const watch = gulp.parallel(build, watchFiles, serve)
-
 
 
 exports.html = html

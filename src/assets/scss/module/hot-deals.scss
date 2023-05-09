@@ -1,10 +1,122 @@
 .hot-deals {
     padding: 20px;
+
+    &__wrapper {
+        &--first {
+            margin-bottom: 20px;
+        }
+    }
     
     &__title {
         margin: 0;
-        padding: 0 20px;
+        margin-bottom: 20px;
     }
 
+    &__subtitle {
+        margin: 0;
+        margin-bottom: 15px;
+    }
 
+    &__slider {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10px;
+
+        & .swiper-wrapper {
+            padding-bottom: 35px;
+        }
+
+        & .swiper-slide {
+            color: #000;
+            background-color: #fff;
+            border-radius: 6px;
+        }
+
+        &-img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 200px;
+            border-radius: 6px 6px 0 0;
+        } 
+        
+        &-content {            
+            padding: 20px;
+            padding-top: 10px;
+
+            &-title {
+                margin: 0;
+                margin-bottom: 15px;
+            }
+        }
+
+        &-list {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+
+        &-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            &-del {
+                display: block;
+                width: 2px;
+                background-color: $color-third;
+            }
+
+            &-info {
+                display: inline-block;
+                margin: 0;
+                font-size: 12px;
+                line-height: 12px;
+                margin-bottom: 8px;
+            }
+
+            &-number {
+                font-size: 16px;
+                line-height: 16px;
+            }
+        }
+
+
+        & #swiper-pagination {
+            bottom: 0;
+        }
+
+        & .swiper-pagination-bullet {
+            background-color: $color-six;
+            width: 12px;
+            height: 12px;
+        }
+    }
+
+    &__links {
+        width: 45%;
+        max-width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-nine;
+        text-decoration: none;
+        color: $color-text-fisrt;
+        font-size: 14px;
+
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__price {
+        padding: 15px 20px;
+        border: 1px solid $color-third;
+        font-size: 14px;
+        line-height: 1;
+    }
 }

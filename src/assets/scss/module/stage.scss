@@ -26,23 +26,43 @@
 
     &__item {
         position: relative;
-        display: flex;
         align-items: flex-start;
-        align-items: center;
+        align-items: center;        
+        background-color: $color-third;
+        background-color: $color-second;
+        padding: 20px;
+        padding-top: 40px;
         padding-bottom: 30px;
-
-        &:last-child {
-            padding-bottom: 0;
-        }
 
         &::before {
             position: absolute;
             content: '';
-            width: 2px;
-            height: 100%;
-            top: 0;
-            left: 28px;
-            background-color: $color-nine;
+            width: 30px;
+            height: 30px;
+            left: 47px;
+            bottom: 0;
+            transform: translateY(70%);
+            background-color: $color-second;
+            z-index: 2;
+            rotate: 45deg;
+        }
+
+        &:nth-child(2n) {
+            background-color: $color-six;  
+
+            &::before {
+                background-color: $color-six;  
+            }
+
+            & .stage__item-text {
+                color: $color-text-second;
+            }
+        }
+
+        &:last-child {
+            &::before {
+                display: none;
+            }
         }
 
         &-number {
@@ -60,6 +80,7 @@
             font-size: 20px;
             font-weight: 800;
             z-index: 2;
+            margin-bottom: 10px;
         }
 
         &-title {
@@ -70,6 +91,7 @@
 
         &-text {
             margin: 0;
+            color: $color-text-fisrt;
         }
     }
 }
