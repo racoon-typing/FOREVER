@@ -18,13 +18,33 @@
     }
     
     &__item {
-        background-color: $color-second;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 300px;
+        position: relative;
+        // background-color: $color-second;
+        // border: 1px solid $color-second;
         padding: 30px 20px;
         margin-bottom: 10px;
-        border-radius: $border-radius;
+        overflow: hidden;
+        // border-radius: $border-radius;
+        // margin-top: 60px;
 
         &:last-child {
             margin-bottom: 0;
+        }
+
+        &-img {
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            width: auto;
+            height: auto;
+            max-height: 300px;
+            z-index: -1;
         }
 
         &-number {
