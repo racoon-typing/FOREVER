@@ -24,13 +24,9 @@
         justify-content: center;
         min-height: 300px;
         position: relative;
-        // background-color: $color-second;
-        // border: 1px solid $color-second;
         padding: 30px 20px;
         margin-bottom: 10px;
         overflow: hidden;
-        // border-radius: $border-radius;
-        // margin-top: 60px;
 
         &:last-child {
             margin-bottom: 0;
@@ -42,8 +38,7 @@
             position: absolute;
             transform: translate(-50%, -50%);
             width: auto;
-            height: auto;
-            max-height: 300px;
+            height: 90%;
             z-index: -1;
         }
 
