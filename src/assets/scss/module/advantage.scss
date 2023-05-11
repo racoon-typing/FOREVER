@@ -33,6 +33,7 @@
         }
 
         &-img {
+            $color: darken($color: #333, $amount: 5%);
             top: 50%;
             left: 50%;
             position: absolute;
@@ -40,6 +41,7 @@
             width: auto;
             height: 90%;
             z-index: -1;
+            fill: $color;
         }
 
         &-number {

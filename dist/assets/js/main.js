@@ -66,6 +66,13 @@ const swiper1 = new Swiper('#swiper-1', {
     prevEl: '.swiper-button-prev',
   },
 
+    // Буллеты
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+
   breakpoints: {
     // when window width is >= 768px
     768: {
