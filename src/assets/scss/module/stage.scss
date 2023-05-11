@@ -28,36 +28,36 @@
         position: relative;
         align-items: flex-start;
         align-items: center;        
-        background-color: $color-third;
-        background-color: $color-second;
+        // background-color: $color-third;
+        // background-color: $color-second;
         padding: 20px;
         padding-top: 40px;
         padding-bottom: 30px;
 
-        &::before {
-            position: absolute;
-            content: '';
-            width: 30px;
-            height: 30px;
-            left: 47px;
-            bottom: 0;
-            transform: translateY(70%);
-            background-color: $color-second;
-            z-index: 2;
-            rotate: 45deg;
-        }
+        // &::before {
+        //     position: absolute;
+        //     content: '';
+        //     width: 30px;
+        //     height: 30px;
+        //     left: 47px;
+        //     bottom: 0;
+        //     transform: translateY(70%);
+        //     background-color: $color-second;
+        //     z-index: 2;
+        //     rotate: 45deg;
+        // }
 
-        &:nth-child(2n) {
-            background-color: $color-six;  
+        // &:nth-child(2n) {
+        //     background-color: $color-six;  
 
-            &::before {
-                background-color: $color-six;  
-            }
+        //     &::before {
+        //         background-color: $color-six;  
+        //     }
 
-            & .stage__item-text {
-                color: $color-text-second;
-            }
-        }
+        //     & .stage__item-text {
+        //         color: $color-text-second;
+        //     }
+        // }
 
         &:last-child {
             &::before {

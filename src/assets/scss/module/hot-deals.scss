@@ -1,5 +1,31 @@
 .hot-deals {
+    position: relative;
     padding: 20px;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/content/hot-deals/bg-content-6.png');
+        background-position: left 5%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        rotate: -180deg;
+        z-index: -1;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: .3);
+    }
 
     &__wrapper {
         &--first {
@@ -8,13 +34,17 @@
     }
     
     &__title {
+        position: relative;
         margin: 0;
         margin-bottom: 20px;
+        z-index: 2;
     }
 
     &__subtitle {
+        position: relative;
         margin: 0;
         margin-bottom: 15px;
+        z-index: 2;
     }
 
     &__slider {

@@ -1,4 +1,8 @@
 .advantage {
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 -100px 100px 0 #000;
+
     &__wrapper {
         width: 100%;
         box-sizing: border-box;
