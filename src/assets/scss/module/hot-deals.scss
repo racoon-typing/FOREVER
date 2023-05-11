@@ -60,6 +60,9 @@
             color: #000;
             background-color: #fff;
             border-radius: 6px;
+            // border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid #fff;
+            box-sizing: border-box;
         }
 
         &-img {
@@ -134,8 +137,12 @@
         justify-content: center;
         background-color: $color-nine;
         text-decoration: none;
-        color: $color-text-fisrt;
+        color: $color-fourth;
         font-size: 14px;
+        // font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        background: linear-gradient(-135deg, #fcc155, #f3e69d);
 
         &-wrapper {
             display: flex;
