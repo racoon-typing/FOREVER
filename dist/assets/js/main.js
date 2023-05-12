@@ -129,6 +129,15 @@ const swiper3 = new Swiper('#swiper-3', {
   }
 
 });
+
+
+// effect: 'coverflow',
+
+// coverFlowEffect: {
+//   rotate: 20,
+//   stretch: 50,
+//   slidesShadows: true,
+// }
 // const formNode = document.querySelectorAll('#form');
 
 // Отправка данных на сервер
