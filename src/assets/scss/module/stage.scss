@@ -22,19 +22,18 @@
         padding: 0;
         margin: 0;
         list-style-type: none;
+        margin-bottom: 40px;
     }
 
     &__item {
         position: relative;
         align-items: flex-start;
-        align-items: center;   
-        margin-bottom: 60px; 
+        align-items: center;
+        margin-bottom: 60px;
         min-height: 200px;
 
         &:last-child {
-            &::before {
-                display: none;
-            }
+            margin-bottom: 0;
         }
 
         &-number {
@@ -75,6 +74,8 @@
 
 @media (min-width: $tablet-width) {
     .stage {
+        overflow: hidden;
+            
         &__wrapper {
             max-width: 900px;
             padding: 40px 30px;
@@ -82,20 +83,26 @@
 
         &__title {
             font-size: 30px;
+            line-height: 1.1;
             margin-bottom: 30px;
         }
 
         &__item {
-            padding-bottom: 40px;
+            min-height: 140px;
 
             &::before {
                 left: 33px;
             }
 
+            &-content {
+                padding-right: 200px;
+            }
+
             &-number {
-                width: 60px;
-                height: 60px;
-                font-size: 24px;
+                top: 0;
+                bottom: unset;
+                rotate: -90deg;
+                font-size: 300px;
             }
 
             &-title {

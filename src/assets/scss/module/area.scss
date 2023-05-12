@@ -19,13 +19,14 @@
 
         .swiper {
             width: 100%;
+            margin-top: 20px;
             padding: 0 29px;
             box-sizing: border-box;
         }
 
         .swiper-wrapper {
-            margin-top: 20px;
             border-radius: $border-radius;
+            margin-bottom: 40px;
         }
 
         .swiper-button-prev,
@@ -39,10 +40,17 @@
             border: 1px solid $color-nine;
             border-radius: 50%;
             top: 50%;
+            transform: translateY(-50%);
             margin-top: 0;
 
             &::after {
                 display: none;
+            }
+
+            &-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
 
@@ -174,8 +182,67 @@
             padding: 0;
         }
 
+        &__slider {  
+            .swiper {
+                padding: 0 100px;
+            }
+
+            .swiper-wrapper {
+                margin-bottom: 60px;
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: auto;
+                height: auto;
+                padding: 12px;
+                border: 1px solid black;
+                border-top: 1px solid rgba(255, 255, 255, 0.3);
+                border-right: 1px solid rgba(255, 255, 255, 0.3);
+                rotate: 45deg;
+                top: 44%;
+                transform: translateY(-50%);
+
+                &-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid #fcc155;
+                    border-radius: 50%;
+                    padding: 12px;
+                    rotate: -45deg;
+                }
+            }
+
+            .swiper-button-next {
+                border: 1px solid black;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                border-left: 1px solid rgba(255, 255, 255, 0.3);
+            }
+
+            .swiper-button-prev {
+                left: 25px;
+            }
+
+            .swiper-button-next {
+                right: 87px;
+            }    
+
+            .swiper-pagination-bullet {
+                width: 14px;
+                height: 14px;
+            }
+
+            .swiper-button-icon {
+                width: 36px;
+            }
+        }
+
         &__item {
-            min-height: 500px;
+            position: relative;
+            min-height: 600px;
+            padding: 20px 50px;
+            padding-bottom: 40px;
 
             &-title {
                 font-size: 26px;
@@ -211,38 +278,30 @@
             margin-bottom: 40px;
         }
 
-        &__item {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            padding: 0;
-
-            &-img {
-                min-height: 600px;
-
-                &-wrapper {
-                    width: 100%;
-                    display: block;
-                    position: relative;
-
-                    &::before {
-                        display: none;
-                    }
-                }
+        &__slider {  
+            .swiper {
+                padding: 0 300px;
             }
+
+            .swiper-button-prev {
+                left: 225px;
+            }
+
+            .swiper-button-next {
+                right: 287px;
+            }    
+        }
+
+        &__item {
+            min-height: 550px;
+
+            // &-img {
+            //     min-height: 600px;
+            // }
 
             &-content {
                 padding: 20px 40px;
                 box-sizing: border-box;
-            }
-
-            &:nth-child(2n + 1) {
-                & .area__item-img-wrapper {
-                    order: 2;
-                }
-
-                & .area__item-content {
-                    order: 1;
-                }
             }
 
             &-title {
@@ -257,7 +316,7 @@
                 }
 
                 &--desktop {
-                    font-size: 22px;
+                    font-size: 15px;
                     display: block;
                 }
             }

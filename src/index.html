@@ -378,26 +378,29 @@
 
                     <!-- 5 -->
                     <li class="advantage__item">
-                        <svg class="advantage__item-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                            fill="currentColor" id="time">
-                            <path
-                                d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm4,12H12a1,1,0,0,1-1-1V6a1,1,0,0,1,2,0v5h3a1,1,0,0,1,0,2Z">
-                            </path>
-                        </svg>
+                        <div class="advantage__item-position">
+                            <svg class="advantage__item-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="currentColor" id="time">
+                                <path
+                                    d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm4,12H12a1,1,0,0,1-1-1V6a1,1,0,0,1,2,0v5h3a1,1,0,0,1,0,2Z">
+                                </path>
+                            </svg>
 
-                        <p class="advantage__item-number">
-                            05
-                        </p>
+                            <p class="advantage__item-number">
+                                05
+                            </p>
 
-                        <p class="advantage__item-text">
-                            Наша
+                            <p class="advantage__item-text">
+                                Наша
 
-                            <span class="advantage__item-text--allocated">
-                                компания берет все заботы на себя,
-                            </span>
+                                <span class="advantage__item-text--allocated">
+                                    компания берет все заботы на себя,
+                                </span>
 
-                            оставляя Ваше время свободным.
-                        </p>
+                                оставляя Ваше время свободным.
+                            </p>
+                        </div>
+
                     </li>
                 </ul>
             </div>
@@ -724,21 +727,26 @@
                         <!-- Назад -->
                         <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"
                             aria-controls="swiper-wrapper-e6380820e563dba2">
-                            <svg class="swiper-button-icon" fill-rule="evenodd" stroke-linejoin="round"
-                                stroke-miterlimit="1.41" clip-rule="evenodd" viewBox="0 0 32 32">
-                                <path fill-rule="nonzero"
-                                    d="M8.41 25H14s.12 0 .22.02c.56.13.93.81.7 1.36a.98.98 0 0 1-.8.6L14 27H5.94l-.1-.01a1.02 1.02 0 0 1-.83-.87L5 25.99v-8c.02-.66.74-1.18 1.38-.92.33.14.57.46.61.81L7 18v5.59l18.3-18.3c.05-.04.1-.1.17-.13.5-.32 1.26-.09 1.48.51a1 1 0 0 1-.1.86c-.04.07-.1.12-.14.18L8.4 25Z" />
-                            </svg>
+                            <div class="swiper-button-prev-wrapper">
+                                <svg class="swiper-button-icon" fill-rule="evenodd" stroke-linejoin="round"
+                                    stroke-miterlimit="1.41" clip-rule="evenodd" viewBox="0 0 32 32">
+                                    <path fill-rule="nonzero"
+                                        d="M8.41 25H14s.12 0 .22.02c.56.13.93.81.7 1.36a.98.98 0 0 1-.8.6L14 27H5.94l-.1-.01a1.02 1.02 0 0 1-.83-.87L5 25.99v-8c.02-.66.74-1.18 1.38-.92.33.14.57.46.61.81L7 18v5.59l18.3-18.3c.05-.04.1-.1.17-.13.5-.32 1.26-.09 1.48.51a1 1 0 0 1-.1.86c-.04.07-.1.12-.14.18L8.4 25Z" />
+                                </svg>
+                            </div>
                         </div>
 
                         <!-- Вперед -->
                         <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
                             aria-controls="swiper-wrapper-e6380820e563dba2">
-                            <svg class="swiper-button-icon" fill-rule="evenodd" stroke-linejoin="round"
-                                stroke-miterlimit="1.41" clip-rule="evenodd" viewBox="0 0 32 32" fill="currentColor">
-                                <path fill-rule="nonzero"
-                                    d="M8.41 25H14s.12 0 .22.02c.56.13.93.81.7 1.36a.98.98 0 0 1-.8.6L14 27H5.94l-.1-.01a1.02 1.02 0 0 1-.83-.87L5 25.99v-8c.02-.66.74-1.18 1.38-.92.33.14.57.46.61.81L7 18v5.59l18.3-18.3c.05-.04.1-.1.17-.13.5-.32 1.26-.09 1.48.51a1 1 0 0 1-.1.86c-.04.07-.1.12-.14.18L8.4 25Z" />
-                            </svg>
+                            <div class="swiper-button-prev-wrapper">
+                                <svg class="swiper-button-icon" fill-rule="evenodd" stroke-linejoin="round"
+                                    stroke-miterlimit="1.41" clip-rule="evenodd" viewBox="0 0 32 32"
+                                    fill="currentColor">
+                                    <path fill-rule="nonzero"
+                                        d="M8.41 25H14s.12 0 .22.02c.56.13.93.81.7 1.36a.98.98 0 0 1-.8.6L14 27H5.94l-.1-.01a1.02 1.02 0 0 1-.83-.87L5 25.99v-8c.02-.66.74-1.18 1.38-.92.33.14.57.46.61.81L7 18v5.59l18.3-18.3c.05-.04.1-.1.17-.13.5-.32 1.26-.09 1.48.51a1 1 0 0 1-.1.86c-.04.07-.1.12-.14.18L8.4 25Z" />
+                                </svg>
+                            </div>
                         </div>
 
                         <!-- If we need pagination -->
@@ -1335,19 +1343,12 @@
                     Как мы работаем?
                 </h2>
 
-                <!-- <p class="stage__text">
-                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
-                    стандартной "рыбой" для текстов на латинице с начала XVI века.
-                </p> -->
-
                 <ul class="stage__list">
                     <!-- 1 -->
                     <li class="stage__item">
-                        <div class="stage__item-number">
-                            <span>
-                                1
-                            </span>
-                        </div>
+                        <span class="stage__item-number">
+                            1
+                        </span>
 
                         <div class="stage__item-content">
                             <h3 class="stage__item-title">
@@ -1362,11 +1363,9 @@
 
                     <!-- 2 -->
                     <li class="stage__item">
-                        <div class="stage__item-number-wrapper">
-                            <span class="stage__item-number">
-                                2
-                            </span>
-                        </div>
+                        <span class="stage__item-number">
+                            2
+                        </span>
 
                         <div class="stage__item-content">
                             <h3 class="stage__item-title">
@@ -1383,11 +1382,9 @@
 
                     <!-- 3 -->
                     <li class="stage__item">
-                        <div class="stage__item-number-wrapper">
-                            <span class="stage__item-number">
-                                3
-                            </span>
-                        </div>
+                        <span class="stage__item-number">
+                            3
+                        </span>
 
                         <div class="stage__item-content">
                             <h3 class="stage__item-title">
@@ -1402,39 +1399,40 @@
 
                     <!-- 4 -->
                     <li class="stage__item">
-                        <div class="stage__item-number-wrapper">
-                            <span class="stage__item-number">
-                                4
-                            </span>
-                        </div>
+                        <span class="stage__item-number">
+                            4
+                        </span>
 
                         <div class="stage__item-content">
                             <h3 class="stage__item-title">
                                 Идеальный вариант найден
                             </h3>
 
-                            <!-- <p class="stage__item-text">
-                                Наша компания ведет переговоры с застройщиком, получает разрешение на предварительный осмотр жилья.
-                            </p> -->
+                            <p class="stage__item-text">
+                                Когда мы нашли идеальный вариант недвижимости, это означает, что объект соответствует
+                                всем критериям, которые были указаны при начале поиска, таким как определенный тип
+                                недвижимости, местоположение, удобства и характеристики.
+                            </p>
                         </div>
                     </li>
 
                     <!-- 5 -->
                     <li class="stage__item">
-                        <div class="stage__item-number-wrapper">
-                            <span class="stage__item-number">
-                                5
-                            </span>
-                        </div>
+                        <span class="stage__item-number">
+                            5
+                        </span>
 
                         <div class="stage__item-content">
                             <h3 class="stage__item-title">
                                 Оформляем документы
                             </h3>
 
-                            <!-- <p class="stage__item-text">
-                                Наша компания ведет переговоры с застройщиком, получает разрешение на предварительный осмотр жилья.
-                            </p> -->
+                            <p class="stage__item-text">
+                                Этап оформления документов при покупке недвижимости является одним из самых важных и
+                                ответственных этапов в процессе сделки. В рамках этого этапа мы помогаем клиентам
+                                договориться о условиях сделки, таких как стоимость, условия оплаты и сроки, а также
+                                сопровождаем их в процессе подготовки необходимых документов.
+                            </p>
                         </div>
                     </li>
                 </ul>
