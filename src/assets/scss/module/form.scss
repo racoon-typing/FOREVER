@@ -137,12 +137,21 @@
         &__wrapper {
             max-width: 900px;
             padding: 40px 30px;
-            padding-top: 70px;
+            padding-top: 140px;
 
             &::before {
                 width: 40px;
                 height: 40px;
                 top: -20px;
+            }
+        }
+
+        &__square {
+            width: 60px;
+            height: 60px;
+
+            &-wrapper {
+                top: 10px;
             }
         }
 
@@ -178,6 +187,11 @@
 
 @media (min-width: $desktop-width) {
     .form {
+        background-image: url(../img/content/form/bg-content-1.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
         &__wrapper {
             padding: 80px 80px;
             max-width: $desktop-width;
@@ -186,7 +200,9 @@
 
         &__content {
             width: 50%;
-            margin-right: 40px;
+            padding: 20px;
+            background-color: rgba($color: #000000, $alpha: 0.4);
+            backdrop-filter: blur(3px);
         }
 
         &__extra {

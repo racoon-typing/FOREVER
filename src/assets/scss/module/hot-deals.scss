@@ -1,6 +1,5 @@
 .hot-deals {
     position: relative;
-    padding: 20px;
 
     &::before {
         position: absolute;
@@ -28,9 +27,7 @@
     }
 
     &__wrapper {
-        &--first {
-            margin-bottom: 20px;
-        }
+        padding: 30px 20px;
     }
     
     &__title {
@@ -140,7 +137,6 @@
         text-decoration: none;
         color: $color-fourth;
         font-size: 14px;
-        // font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.5px;
         background: linear-gradient(-135deg, #fcc155, #f3e69d);
@@ -162,10 +158,9 @@
 
 @media (min-width: $tablet-width) {
     .hot-deals {
-        // &__wrapper {
-        //     max-width: 900px;
-        //     padding: 40px 30px;
-        // }
+        &__wrapper {
+            padding: 40px 30px;
+        }
 
         &__title {
             font-size: 30px;

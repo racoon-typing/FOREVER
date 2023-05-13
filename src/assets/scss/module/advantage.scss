@@ -39,7 +39,6 @@
         }
 
         &-img {
-            $color: darken($color: #333, $amount: 5%);
             top: 50%;
             left: 50%;
             position: absolute;
@@ -47,7 +46,7 @@
             width: auto;
             height: 90%;
             z-index: -1;
-            fill: $color;
+            fill: $color-seven;
         }
 
         &-number {
@@ -106,21 +105,25 @@
 @media (min-width: $desktop-width) {
     .advantage {
         &__wrapper {
-            padding: 80px 80px;
+            padding: 80px 30px;
             max-width: $desktop-width;
         }
 
         &__title {
             font-size: 40px;
+            line-height: 1.5;
             margin-bottom: 40px;
         }
 
         &__list {
-            grid-template-columns: repeat(5, 1fr);
-            column-gap: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         &__item {
+            width: 32%;
+            padding: 30px;
             justify-content: flex-start;
             box-sizing: border-box;
 
@@ -133,7 +136,7 @@
             }
 
             &-img {
-                height: 60%;
+                height: 80%;
             }
 
             &-number {
