@@ -118,7 +118,7 @@ const swiper2 = new Swiper('#swiper-2', {
 
     1440: {
       slidesPerView: 4,
-      spaceBetween: 35,
+      spaceBetween: 20,
     }
   }
 

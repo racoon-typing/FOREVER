@@ -269,7 +269,7 @@
 @media (min-width: $desktop-width) {
     .area {
         &__wrapper {
-            padding: 80px 80px;
+            padding: 80px 30px;
             max-width: $desktop-width;
         }
 
@@ -294,7 +294,7 @@
         }
 
         &__item {
-            min-height: 550px;
+            min-height: 500px;
 
             &-content {
                 padding: 20px 40px;

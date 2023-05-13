@@ -115,7 +115,7 @@
 @media (min-width: $desktop-width) {
     .map {
         &__wrapper {
-            padding: 80px 80px;
+            padding: 80px 30px;
             max-width: $desktop-width;
             display: grid;
             grid-template-columns: 1fr 1fr;
