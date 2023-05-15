@@ -19,32 +19,20 @@
             width: 100%;
         }
 
-        .swiper-wrapper {
-            padding-top: 60px;
-            border-radius: $border-radius;
-        }
-
         .swiper-slide {
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: $color-second;
             padding-top: 30px;
         }
 
         .swiper-button-prev,
         .swiper-button-next {
             position: absolute;
-            width: 50px;
-            height: 50px;
-            background-color: $color-third;
+            width: 22px;
+            height: 34px;
             border-radius: 50%;
-            top: 0;
             margin-top: 0;
-            background-position: center;
-            background-image: url('../img/icon/arrow.svg');
-            background-repeat: no-repeat;
-            background-size: 100%;
 
             &::after {
                 display: none;
@@ -52,7 +40,7 @@
         }
 
         .swiper-button-prev {
-            left: calc(100% - 110px - 3%);
+            left: 3%;
         }
 
         .swiper-button-next {
@@ -64,10 +52,9 @@
         }
 
         .swiper-button-icon {
-            width: 11px;
-            height: 20px;
-            fill: $color-text-second;
-            color: $color-text-second;
+            width: auto;
+            height: 30px;
+            color: $color-text-fisrt;
         }
 
         &-img {
@@ -92,6 +79,7 @@
             margin: 0;
             font-size: 24px;
             text-align: center;
+            margin-bottom: 6px;
         }
         
         &-name {
