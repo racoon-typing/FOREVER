@@ -8,7 +8,6 @@
 @import './module/about';
 @import './module/result';
 @import './module/advantage';
-@import './module/reviews';
 @import './module/offers';
 @import './module/map';
 @import './module/form';
@@ -18,6 +17,7 @@
 @import './module/hot-deals';
 @import './module/preload';
 // Страница О НАС
+@import './module/about_page/reviews';
 @import './module/about_page/gallery';
 @import './module/about_page/partners';
 @import './module/about_page/team';

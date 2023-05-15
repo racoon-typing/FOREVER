@@ -9,6 +9,8 @@
     &__title {
         margin: 0;
         margin-bottom: 25px;
+        text-transform: uppercase;
+        line-height: 1.2;
         padding: 0 20px;
     }
 
@@ -59,8 +61,8 @@
 
         &-img {
             display: block;
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             object-fit: cover;
             border-radius: 50%;
             border: 5px solid $color-nine;
