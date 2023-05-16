@@ -46,6 +46,7 @@
 
 @media (min-width: $desktop-width) {
     .partners {
+        min-height: 100vh;
         background-image: url('../img/content/page-about/partners/bg-content-1.jpeg');
         background-position: center;
         background-repeat: no-repeat;
@@ -54,11 +55,9 @@
         &__wrapper {
             display: flex;
             flex-direction: column;
-            // grid-template-columns: 1fr 50%;
-            // column-gap: 40px;
             padding: 80px 80px;
+            padding-top: 180px;
             max-width: $desktop-width;
-            min-height: 700px;
         }
 
         &__title {
@@ -66,7 +65,8 @@
             margin: 0;
             font-size: 40px;
             line-height: 1.5;
-            padding: 20px;
+            padding: 30px;
+            padding-bottom: 0;
             grid-column: 1 / 2;
             background-color: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(5px);
@@ -77,9 +77,13 @@
         }
 
         &__content {
+            display: flex;
+            align-items: center;
             max-width: 600px;
+            min-height: 400px;
             grid-column: 1 / 2;
-            padding: 20px;
+            padding: 30px;
+            padding-top: 0;
             background-color: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(5px);
         }
