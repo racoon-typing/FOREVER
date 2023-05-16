@@ -70,7 +70,6 @@ const swiper2 = new Swiper('#swiper-2', {
 
 
 const swiper3 = new Swiper('#swiper-3', {
-
   // Optional parameters
   direction: 'horizontal',
   loop: true,
@@ -84,7 +83,7 @@ const swiper3 = new Swiper('#swiper-3', {
   breakpoints: {
     // when window width is >= 768px
     768: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 20
     },
 
