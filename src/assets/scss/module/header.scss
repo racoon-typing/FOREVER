@@ -46,14 +46,14 @@
     &__link {
         display: block;
         padding: 12px 20px;
-        background-color: $color-nine;
-        // background: linear-gradient(-135deg, #f7eaa1, #aa732f);
-        background: linear-gradient(-135deg, #fcc155, #f3e69d);
-        color: $color-text-second;
         border-radius: $border-radius;
         text-decoration: none;
         font-size: 14px;
         line-height: 14px;
+        background: none;
+        background-color: unset;
+        border: 1px solid $color-nine;
+        color: $color-nine;
 
         &-wrapper {
             margin-right: 35px;
@@ -61,11 +61,15 @@
         }
 
         &:hover {
-            background-color: $color-third;
+            background: none;
+            background-color: $color-nine;
+            color: $color-text-second;
         }
-        
+
         &:active {
-            background-color: darken($color: $color-third, $amount: 10%);
+            background: none;
+            background-color: darken($color: $color-nine, $amount: 10);
+            color: $color-text-second;
         }
     }
 
@@ -281,7 +285,7 @@
             left: 26%;
             background-color: transparent;
             transition: unset;
-            bottom: 2px;
+            bottom: 8px;
 
             &-nav {
                 &-list {

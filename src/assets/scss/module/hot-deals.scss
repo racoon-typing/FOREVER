@@ -141,7 +141,19 @@
         font-size: 14px;
         text-transform: uppercase;
         letter-spacing: 0.5px;
-        background: linear-gradient(-135deg, #fcc155, #f3e69d);
+        background-color: unset;
+        border: 1px solid $color-nine;
+        color: $color-text-second;
+
+        &:hover {
+            background-color: $color-nine;
+            color: $color-text-second;
+        }
+        
+        &:active {
+            background-color: darken($color: $color-nine, $amount: 10);
+            color: $color-text-second;
+        }
 
         &-wrapper {
             display: flex;

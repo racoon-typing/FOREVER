@@ -166,6 +166,16 @@
             text-decoration: none;
             color: $color-text-fisrt;
             z-index: 2;
+
+            &:hover {
+                background-color: $color-six;
+                color: $color-text-second;
+            }
+            
+            &:active {
+                background-color: darken($color: $color-six, $amount: 5);
+                color: $color-text-second;
+            }
         }
     }
 }

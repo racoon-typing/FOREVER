@@ -104,24 +104,17 @@
         margin-top: 10px;
         font-size: 16px;
         line-height: 16px;
-
-        // &:hover {
-        //     background-color: darken($color: $color-fifth, $amount: 5%);
-        //     color: $color-text-second;
-        // }
-
-        // &:active {
-        //     background-color: $color-six;
-        //     border: 2px solid $color-fifth;
-        // }
+        background-color: unset;
+        border: 1px solid $color-nine;
+        color: $color-nine;
 
         &:hover {
-            background-color: darken($color: $color-third, $amount: 10%);
+            background-color: $color-nine;
             color: $color-text-second;
         }
-
+        
         &:active {
-            background-color: darken($color: $color-third, $amount: 30%);
+            background-color: darken($color: $color-nine, $amount: 10);
             color: $color-text-second;
         }
     }
