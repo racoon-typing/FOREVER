@@ -29,6 +29,17 @@
         color: #fcc155;
         margin-bottom: 5px;
         background-color: #000;
-        // margin-right: 15px;
+
+        &:hover {
+            background: none;
+            background-color: $color-nine;
+            color: $color-text-second;
+        }
+
+        &:active {
+            background: none;
+            background-color: darken($color: $color-nine, $amount: 10);
+            color: $color-text-second;
+        }
     }
 }
