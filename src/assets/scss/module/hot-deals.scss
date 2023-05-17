@@ -8,7 +8,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('../img/content/hot-deals/bg-content-6.png');
+        background-image: url('../img/content/hot-deals/bg-content-1.png');
         background-position: left 5%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -224,6 +224,23 @@
 
         &__links {
             width: 40%;
+        }
+
+        &__slider {
+            & .swiper-wrapper {
+                padding: 0;
+                overflow-x: auto;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            & .swiper-slide {
+                margin-right: 20px;
+                color: #000;
+            }
+
         }
     }
 }

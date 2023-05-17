@@ -1,5 +1,4 @@
 .offers-page {
-
     &__wrapper {
         width: 100%;
         box-sizing: border-box;
@@ -118,7 +117,18 @@
         }
 
         &__item {
-            margin-bottom: 30px;
+            margin-bottom: 50px;
+        }
+
+        &__sublist {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 30px;
+            row-gap: 10px;
+        }
+
+        &__subitem {
+            margin-bottom: 0;
         }
     }
 }
