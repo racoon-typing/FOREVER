@@ -105,6 +105,14 @@ const swiper4 = new Swiper('#swiper-4', {
   direction: 'horizontal',
   loop: true,
   spaceBetween: 10,
+  slidesPerView: 1,
+
+  thumbs: {
+    swiper: {
+      el: '.image-mini-slider',
+      slidesPerView: 3,
+    } 
+  }
 });
 
 
