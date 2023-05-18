@@ -22,11 +22,14 @@
         flex-direction: column;
         background-color: $color-second;
         margin-bottom: 20px;
+        background-color: darken($color: #333333, $amount: 5);
+        padding: 15px 0;
 
         &-title {
             margin: 0;
             margin-bottom: 10px;
             padding: 0 20px;
+            text-align: center;
         }
     }
 
@@ -41,6 +44,10 @@
             height: 100%;
             min-height: 200px;
         } 
+
+        & .swiper {
+            padding: 0 20px;
+        }
 
         & #swiper-pagination {
             bottom: 0;
@@ -57,8 +64,7 @@
         padding: 0;
         margin: 0;
         list-style-type: none;
-        padding: 0 20px;
-        padding-bottom: 20px;
+        padding: 0 15px;
     }
 
     &__subitem {
@@ -81,6 +87,21 @@
         min-height: 40px;
         font-size: 18px;
         line-height: 18px;
+
+        background-color: $color-fourth;
+        border: 1px solid $color-six;
+        color: $color-text-fisrt;
+
+        &:hover {
+            background-color: $color-six;
+            color: $color-text-second;
+        }
+        
+        &:active {
+            background-color: darken($color: $color-six, $amount: 5);
+            color: $color-text-second;
+        }
+
 
         &-wrapper {
             display: flex;
@@ -170,6 +191,11 @@
 
         &__item {
             margin-bottom: 0;
+        }
+
+        &__sublist {
+            display: flex;
+            flex-direction: column;
         }
 
         &__button {

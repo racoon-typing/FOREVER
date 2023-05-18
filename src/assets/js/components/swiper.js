@@ -3,7 +3,6 @@ const swiper1 = new Swiper('#swiper-1', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  // initialSlide: 3,
 
   // Navigation arrows
   navigation: {
@@ -105,14 +104,10 @@ const swiper4 = new Swiper('#swiper-4', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-
-  // Буллеты
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true,
-  },
+  spaceBetween: 10,
 });
+
+
 
 // effect: 'coverflow',
 
