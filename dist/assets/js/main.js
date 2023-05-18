@@ -156,6 +156,18 @@ const swiper3 = new Swiper('#swiper-3', {
 
 
 
+// const swiperMini = document.querySelectorAll('.offers-page__swiper');
+// console.log(swiperMini);
+
+// function getSwiper(swiperMini) {
+//   swiperMini.forEach((element, index)=> {
+//     element.classList.add(`offers-page__swiper--${index}`)
+//   });
+// }
+
+// getSwiper();
+
+
 const swiper4 = new Swiper('#swiper-4', {
   // Optional parameters
   direction: 'horizontal',
@@ -163,12 +175,13 @@ const swiper4 = new Swiper('#swiper-4', {
   spaceBetween: 10,
   slidesPerView: 1,
 
-  thumbs: {
-    swiper: {
-      el: '.image-mini-slider',
-      slidesPerView: 3,
-    } 
-  }
+  // thumbs: {
+  //   swiper: {
+  //     el: '.image-mini-slider',
+  //     slidesPerView: 3,
+  //     spaceBetween: 10,
+  //   } 
+  // }
 });
 
 

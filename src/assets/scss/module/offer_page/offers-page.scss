@@ -23,7 +23,7 @@
         background-color: $color-second;
         margin-bottom: 20px;
         background-color: darken($color: #333333, $amount: 5);
-        padding: 15px 0;
+        padding-bottom: 15px;
 
         &-title {
             margin: 0;
@@ -45,10 +45,6 @@
             min-height: 200px;
         } 
 
-        // & .swiper {
-        //     padding: 0 20px;
-        // }
-
         & #swiper-pagination {
             bottom: 0;
         }
@@ -59,19 +55,24 @@
             height: 12px;
         }
 
-        & .image-mini-slider__slide {
-            opacity: 0.2;
-            transition: opacity 0.3 ease 0s;
+        & .image-mini-slider {
+            padding: 10px;
         }
 
+        & .image-mini-slider__slide {
+            opacity: 0.3;
+            transition: opacity 0.3 ease 0s;
+        }
+        
         & .image-mini-slider__slide.swiper-slide-thumb-active {
             opacity: 1;
         }
-
+        
         & .image-mini-slider__image {
+            min-height: 35px;
             position: relative;
             padding: 0 0 30% 0;
-            cursor: pointer;
+            cursor: pointer;           
         }
 
         & .image-mini-slider__image img {
@@ -92,9 +93,13 @@
     }
 
     &__subitem {
-        display: flex;
+        display: none;
         flex-direction: column;
         margin-bottom: 4px;
+
+        &--general {
+            display: flex;
+        }
 
         &-text {
             margin: 0;
