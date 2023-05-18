@@ -25,6 +25,10 @@
         background-color: darken($color: #333333, $amount: 5);
         padding-bottom: 15px;
 
+        &--hidden {
+            display: none;
+        }
+
         &-title {
             margin: 0;
             margin-bottom: 10px;
