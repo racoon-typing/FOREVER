@@ -29,6 +29,7 @@
         color: #fcc155;
         margin-bottom: 5px;
         background-color: #000;
+        text-align: center;
 
         &--active {
             background-color: #fcc155;
@@ -45,6 +46,22 @@
             background: none;
             background-color: darken($color: $color-nine, $amount: 10);
             color: $color-text-second;
+        }
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .offers-page-filter {
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        &__item {
+            &:last-child {
+                grid-column: 1 / 3;
+            }
         }
     }
 }
