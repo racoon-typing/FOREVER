@@ -16,7 +16,7 @@ $title = "Заявка с сайта";
 $body = "
 <h2>Новое письмо</h2>
 <b>Имя:</b> $name<br>
-<b>Имя:</b> $phone<br>
+<b>Телефон:</b> $phone<br>
 <b>Почта:</b> $email<br><br>
 <b>Сообщение:</b><br>$comment
 ";
@@ -39,7 +39,7 @@ try {
     $mail->setFrom('test_tester_2023@mail.ru', 'Сайт Forever'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('dannil.suvorov.97@bk.ru');  
+    $mail->addAddress('forever_company@bk.ru');  
     // $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
 
     // Прикрипление файлов к письму
