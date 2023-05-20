@@ -82,6 +82,8 @@
         margin-left: auto;
         cursor: pointer;
 
+        display: none;
+
         &-line {
             position: absolute;
             display: block;
@@ -285,6 +287,8 @@
             background-color: transparent;
             transition: unset;
             bottom: 8px;
+
+            display: none;
 
             &-nav {
                 &-list {
