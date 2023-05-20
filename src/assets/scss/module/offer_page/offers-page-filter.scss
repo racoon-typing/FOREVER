@@ -30,6 +30,10 @@
         margin-bottom: 5px;
         background-color: #000;
 
+        &--active {
+            background-color: #fcc155;
+            color: #000;
+        }
 
         &:hover {
             background: none;
