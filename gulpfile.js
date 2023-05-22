@@ -100,7 +100,7 @@ function css() {
         .pipe(sass())
         .pipe(autoprefixer())
         .pipe(cssbeautify())
-        .pipe(hash()) // хеширование
+        // .pipe(hash()) // хеширование
         .pipe(dest(path.build.css, { sourcemaps: true }))
         .pipe(cssnano({
             zindex: false,
@@ -129,7 +129,7 @@ function js() {
             }
         }))
         .pipe(rigger())
-        .pipe(hash()) // хеширование
+        // .pipe(hash()) // хеширование
         .pipe(dest(path.build.js))
         .pipe(uglify())
         .pipe(rename({
