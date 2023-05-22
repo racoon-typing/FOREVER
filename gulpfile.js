@@ -22,6 +22,7 @@ const fileInclude = require("gulp-file-include");
 const htmlmin = require("gulp-htmlmin");
 const size = require("gulp-size");
 const beautify = require("gulp-html-beautify");
+const hash = require('gulp-hash-filename');
 
 
 
@@ -99,6 +100,7 @@ function css() {
         .pipe(sass())
         .pipe(autoprefixer())
         .pipe(cssbeautify())
+        .pipe(hash()) // хеширование
         .pipe(dest(path.build.css, { sourcemaps: true }))
         .pipe(cssnano({
             zindex: false,
@@ -127,6 +129,7 @@ function js() {
             }
         }))
         .pipe(rigger())
+        .pipe(hash()) // хеширование
         .pipe(dest(path.build.js))
         .pipe(uglify())
         .pipe(rename({
