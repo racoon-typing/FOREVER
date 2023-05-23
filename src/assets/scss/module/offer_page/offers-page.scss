@@ -211,7 +211,7 @@
         min-height: 100vh;
         background-color: $color-fourth;
         z-index: 3;
-        padding: 10px;
+        padding: 20px 10px;
         box-sizing: border-box;
 
         &-cross {
@@ -244,10 +244,20 @@
         }
 
         &-gallery {
+            margin-bottom: 10px;
+
             & img {
+                display: block;
                 width: 100%;
-                height: auto;
+                height: 100%;
+                object-fit: cover;
+                margin: 0;
             }
+        }
+
+        &-title {
+            margin: 0;
+            margin-bottom: 20px;
         }
 
         &-sublist {
@@ -381,6 +391,15 @@
         }
 
         &__template {
+            &-gallery {
+                margin-bottom: 15px;
+            }
+
+            &-title {
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+
             &-sublist {
                 margin-bottom: 50px;
             }
@@ -394,6 +413,17 @@
                     &::before {
                         width: 100%;
                     }
+                }
+            }
+
+            &-link {
+                min-width: 300px;
+                padding: 10px 25px;
+
+                &-wrapper {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
         }
@@ -457,6 +487,40 @@
         &__button {
             max-width: 300px;
             min-height: 50px;
+        }
+
+        &__template {
+            position: relative;
+            display: grid;
+            grid-template-columns: 50% 1fr;
+            column-gap: 20px;
+            padding-top: 40px;
+
+            &-cross {
+                position: absolute;
+                margin: 0;
+                right: 0;
+            }
+
+            &-gallery {
+                margin-bottom: 0;
+            }
+
+            &-title {
+                font-size: 30px;
+                margin-bottom: 25px;
+                line-height: 1.5;
+            }
+
+            &-subitem {
+                font-size: 18px;
+            }
+
+            &-link {
+                &-wrapper {
+                    justify-content: flex-start;
+                }
+            }
         }
     }
 }
