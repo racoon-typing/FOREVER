@@ -1,6 +1,7 @@
 const offerLinks = document.querySelectorAll('.offers-page__item-link');
 const offerList = document.querySelector('.offers-page');
 const offerPageFilter = document.querySelector('.offers-page-filter');
+const templateN = document.querySelector('.offers-page__template');
 const outputArr = document.querySelector('.offers-page__template-gallery');
 
 offerLinks.forEach(el => {
@@ -24,7 +25,6 @@ offerLinks.forEach(el => {
         const arrMi = [itemDescription.textContent, itemMap.textContent, itemClass.textContent, itemArea.textContent, itemMetro.textContent, itemCertPrice.textContent, itemSquare.textContent, itemPrice.textContent]
 
         // Всталяет характеристики
-        const templateN = document.querySelector('.offers-page__template');
         const templItems = document.querySelectorAll('.offers-page__template-subitem');
         templItems.forEach((el, index) => {
             const needFu = el.querySelector('.offers-page__template-subitem-number');
@@ -60,4 +60,13 @@ offerLinks.forEach(el => {
         offerPageFilter.style.display = 'none';
         templateN.classList.add('offers-page__template--open')
     });
+});
+
+
+const closeFullInfoButton = document.querySelector('.offers-page__template-cross');
+
+closeFullInfoButton.addEventListener('click', () => {
+    offerList.style.display = 'block';
+    offerPageFilter.style.display = 'block';
+    templateN.classList.remove('offers-page__template--open')
 });
