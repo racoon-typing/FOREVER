@@ -4,3 +4,4 @@
 //= components/preloader.js
 //= components/filter.js
 //= components/offer.js
+//= components/full-offer.js
