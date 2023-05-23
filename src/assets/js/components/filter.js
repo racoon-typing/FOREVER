@@ -1,6 +1,7 @@
 // ========= СОРТИРОВКА =========
 const filterList = document.querySelector('.offers-page-filter__list');
 const filterItems = document.querySelectorAll('.offers-page-filter__item');
+const emptyItem = document.querySelector('.offers-page__empty');
 
 const ALL = 'все предложения';
 
@@ -10,7 +11,6 @@ filterList.addEventListener('click', (evt) => {
     // Очищает активный пункт фильтрации   
     filterItems.forEach(i => {
         if (i.classList.contains('offers-page-filter__item--active')) {
-            console.log(i);
             i.classList.remove('offers-page-filter__item--active');
         }
     });
@@ -18,7 +18,6 @@ filterList.addEventListener('click', (evt) => {
     // Добавляет активный пункт фильтрации   
     const filterItem = evt.target;
     filterItem.classList.add('offers-page-filter__item--active');
-
 
     // Очистка 
     offerItem.forEach((el) => {
@@ -30,6 +29,10 @@ filterList.addEventListener('click', (evt) => {
 
     // Если условие все предложения, то ничего не делать
     if (filterOption === ALL) {
+        if (emptyItem.classList.contains('offers-page__empty--open')) {
+            emptyItem.classList.remove('offers-page__empty--open');
+        }
+
         return;
     }
 
@@ -64,6 +67,24 @@ filterList.addEventListener('click', (evt) => {
             }
         })
     });
+
+    // Считает кол-во скрытых элементов 
+    let items = 0;
+    offerItem.forEach((el) => {
+        const hiddenItem = el.classList.contains('offers-page__item--hidden');
+
+        if (hiddenItem) {
+            items++;
+        }
+    });
+
+    // Показывает пустой оффер, если кол-во скрытых элементов = кол-ву всех элементов
+    if (items === offerItem.length) {
+        emptyItem.classList.add('offers-page__empty--open')
+        items = 0;
+    } else {
+        emptyItem.classList.remove('offers-page__empty--open')
+    }
 
     // console.log(`Очистка массива совподений. Массив: ${myArr}`);
     myArr = [];

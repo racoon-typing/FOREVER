@@ -171,13 +171,16 @@
     &__empty {
         display: none;
         position: relative;
-        // display: flex;
         align-items: center;
         min-height: 400px;
         border: 2px solid #333333;
         box-sizing: border-box;
         padding: 20px;
         padding-top: 100px;
+
+        &--open {
+            display: flex;
+        }
 
         &::before {
             position: absolute;
@@ -275,6 +278,10 @@
         &__subitem {
             margin-bottom: 0;
         }
+
+        &__button {
+            min-height: 45px;
+        }
     }
 }
 
@@ -334,6 +341,7 @@
 
         &__button {
             max-width: 300px;
+                min-height: 50px;
         }
     }
 }
