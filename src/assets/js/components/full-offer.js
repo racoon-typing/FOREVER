@@ -58,7 +58,11 @@ offerLinks.forEach(el => {
         
         offerList.style.display = 'none';
         offerPageFilter.style.display = 'none';
-        templateN.classList.add('offers-page__template--open')
+        templateN.classList.add('offers-page__template--open');
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 });
 

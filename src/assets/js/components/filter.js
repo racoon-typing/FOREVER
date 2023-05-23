@@ -42,7 +42,7 @@ filterList.addEventListener('click', (evt) => {
     // Массив с индексами подходящих предложений
     let myArr = [];
     arr.forEach((el, index) => {
-        const area = el.querySelector('.offers-page__subitem-number-area');
+        const area = el.querySelector('.offers-page__subitem-number--area');
 
         let text;
         if (area) {
