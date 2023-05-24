@@ -25,32 +25,3 @@ function closeMenu() {
     navList.classList.remove('nav__list-open');
     pageBody.style.overflow = 'auto'
 }
-
-// Прокрутка
-// function scrollToTopik(evt) {
-//     const itemId = evt.target.id;
-
-//     switch (itemId) {
-//         // 1
-//         case 'about':
-//             closeMenu();
-//             break;
-//         // 2
-//         case 'we':
-//             closeMenu();
-//             break;
-//         // 3
-//         case 'events':
-//             closeMenu();
-//             break;
-//         // 4
-//         case 'partner':
-//             closeMenu();
-//             break;
-//         case 'member':
-//             closeMenu();
-//             break;
-//     }
-// }
-
-// navList.addEventListener('click', scrollToTopik)

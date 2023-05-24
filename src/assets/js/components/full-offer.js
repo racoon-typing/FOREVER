@@ -34,7 +34,6 @@ offerLinks.forEach(el => {
 
         // Фото оффера
         const itemsImg = Array.from(nearestItem.querySelectorAll('.offers-page__slider-img'));
-        console.log(itemsImg);
 
         const waysToImg = itemsImg.map((el) => {
             return el.src;
@@ -58,7 +57,6 @@ offerLinks.forEach(el => {
         
         offerList.style.display = 'none';
         offerPageFilter.style.display = 'none';
-        // templateN.classList.remove('offers-page__template--hidden')
         templateN.classList.add('offers-page__template--open');
         window.scrollTo({
             top: 0,
@@ -74,5 +72,4 @@ closeFullInfoButton.addEventListener('click', () => {
     offerList.style.display = 'block';
     offerPageFilter.style.display = 'block';
     templateN.classList.remove('offers-page__template--open');
-    // templateN.classList.add('offers-page__template--hidden');
 });

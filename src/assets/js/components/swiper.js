@@ -1,4 +1,4 @@
-// Слайдер с навигацией сверху
+// Слайдер для районов 
 const swiper1 = new Swiper('#swiper-1', {
   // Optional parameters
   direction: 'horizontal',
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
+// Слайдер команды 
 const swiper3 = new Swiper('#swiper-3', {
   // Optional parameters
   direction: 'horizontal',
@@ -98,42 +98,12 @@ const swiper3 = new Swiper('#swiper-3', {
 
 });
 
-
-
-// const swiperMini = document.querySelectorAll('.offers-page__swiper');
-// console.log(swiperMini);
-
-// function getSwiper(swiperMini) {
-//   swiperMini.forEach((element, index)=> {
-//     element.classList.add(`offers-page__swiper--${index}`)
-//   });
-// }
-
-// getSwiper();
-
-
+// Слайдер для фото недвижимости на странице Предложения 
 const swiper4 = new Swiper('#swiper-4', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
   spaceBetween: 10,
   slidesPerView: 1,
-
-  // thumbs: {
-  //   swiper: {
-  //     el: '.image-mini-slider',
-  //     slidesPerView: 3,
-  //     spaceBetween: 10,
-  //   } 
-  // }
 });
 
-
-
-// effect: 'coverflow',
-
-// coverFlowEffect: {
-//   rotate: 20,
-//   stretch: 50,
-//   slidesShadows: true,
-// }

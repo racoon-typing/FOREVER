@@ -35,7 +35,6 @@ req.onload = function() {
 req.onerror = function() {
 	alert("Ошибка отправки запроса");
 
-	
 };
 req.send(new FormData(event.target));
 }

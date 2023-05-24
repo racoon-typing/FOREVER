@@ -137,6 +137,8 @@
 
         &-number {
             margin: 0;
+            color: $color-text-fisrt;
+            text-decoration: none;
         }
     }
 
@@ -195,6 +197,7 @@
         }
 
         &-title {
+            line-height: 1.2;
             margin: 0;
             margin-bottom: 20px;
             text-align: center;
