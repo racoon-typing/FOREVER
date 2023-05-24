@@ -71,13 +71,14 @@
     .offers-page-filter {
         padding-top: 90px;
 
+        &__wrapper {
+            padding: 60px 30px;
+        }
+
         &__list {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            // display: grid;
-            // grid-template-columns: repeat(4, 1fr);
-            // gap: 10px;
         }
 
         &__item {

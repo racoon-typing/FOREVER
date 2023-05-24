@@ -18,7 +18,6 @@
         &-content {
             position: relative;
             width: 100%;
-            max-width: $mobile-width;
             margin: 0 auto;
         }
 
@@ -88,6 +87,7 @@
             width: 100%;
             height: 3px;
             background-color: $color-six;
+            border-radius: 10px;
             left: 0;
             opacity: 1;
             transition: all 0.5s ease-out;
@@ -221,10 +221,6 @@
         &__wrapper {
             padding: 5px 30px;
             padding-top: 10px;
-
-            &-content {
-                max-width: $tablet-width;
-            }
         }
 
         &__logo {
