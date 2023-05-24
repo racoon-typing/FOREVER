@@ -21,10 +21,10 @@
         display: flex;
         flex-direction: column;
         background-color: $color-second;
-        margin-bottom: 20px;
         background-color: darken($color: #333333, $amount: 5);
         padding-bottom: 15px;
-
+        margin-bottom: 20px;      
+        
         &-content {
             padding: 0 15px;
         }
@@ -161,10 +161,10 @@
 
         &-wrapper {
             display: none;
-            // display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
+            margin-top: 20px;
         }
     }
 
@@ -221,7 +221,7 @@
         
         &--hidden {
             opacity: 0;
-            transition: all 1s ease-out;
+            transition: all 0.5s ease-out;
             transform: scale(0);
         }
         
@@ -412,6 +412,10 @@
 
         &__button {
             min-height: 45px;
+
+            &-wrapper {
+                margin-top: 50px;
+            }
         }
 
         &__template {
@@ -467,13 +471,11 @@
         }
 
         &__list {
+            $gap: calc((100% - 32% * 3) /  2);
             width: 100%;
-            display: flex;
-            flex-wrap: wrap;
             display: grid;
-            grid-template-columns: repeat(3, 33%);
-            gap: 30px;
-            margin-bottom: 60px;
+            grid-template-columns: repeat(3, 32%);
+            gap: $gap;
         }
 
         &__item {
@@ -514,7 +516,6 @@
         }
 
         &__template {
-            position: relative;
             display: grid;
             grid-template-columns: 50% 1fr;
             column-gap: 20px;
