@@ -280,18 +280,55 @@
             left: 26%;
             background-color: transparent;
             transition: unset;
-            bottom: 8px;
+            bottom: 18px;
 
             &-nav {
                 &-list {
                     display: flex;
+                    justify-content: space-between;
                 }
 
                 &-item {
+                    width: 100%;
+                    max-width: 200px;
+
                     &-link {
-                        min-width: 200px;
+                        position: relative;
+                        width: 100%;
                         padding: 24px 20px;
+                        padding: 0;
+                        padding-bottom: 18px;
                         box-shadow: none;
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            width: 0;
+                            height: 2px;
+                            bottom: 4px;
+                            left: 0;
+                            background-color: $color-nine;
+                            z-index: 2;
+                            transition: all 0.3s ease-out;
+                        }
+
+                        &:hover {
+                            background-color: unset;
+                            color: $color-text-fisrt;
+
+                            &::before {
+                                width: 100%;
+                            }
+                        }
+
+                        &:active {
+                            background-color: unset;
+                            color: $color-text-fifth;
+
+                            &::before {
+                                width: 100%;
+                            }
+                        }
                     }
                 }
             }
