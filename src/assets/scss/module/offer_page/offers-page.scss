@@ -559,15 +559,27 @@
             display: grid;
             grid-template-columns: 48% 1fr;
             column-gap: 40px;
-            padding-top: 90px;
+            padding-top: 100px;
             margin-top: 90px;
             padding-bottom: 60px;
+
+            &-content {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
 
             &-cross {
                 position: absolute;
                 margin: 0;
                 right: 30px;
-                top: 20px;
+                top: 30px;
+                width: 40px;
+                height: 40px;
+            }
+
+            &-line {
+                top: 19px;
             }
 
             &-gallery {
@@ -578,6 +590,10 @@
                 font-size: 30px;
                 margin-bottom: 25px;
                 line-height: 1.5;
+            }
+
+            &-sublist {
+                margin-bottom: auto;
             }
 
             &-subitem {
