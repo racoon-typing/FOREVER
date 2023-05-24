@@ -58,6 +58,7 @@ offerLinks.forEach(el => {
         
         offerList.style.display = 'none';
         offerPageFilter.style.display = 'none';
+        // templateN.classList.remove('offers-page__template--hidden')
         templateN.classList.add('offers-page__template--open');
         window.scrollTo({
             top: 0,
@@ -72,5 +73,6 @@ const closeFullInfoButton = document.querySelector('.offers-page__template-cross
 closeFullInfoButton.addEventListener('click', () => {
     offerList.style.display = 'block';
     offerPageFilter.style.display = 'block';
-    templateN.classList.remove('offers-page__template--open')
+    templateN.classList.remove('offers-page__template--open');
+    // templateN.classList.add('offers-page__template--hidden');
 });
