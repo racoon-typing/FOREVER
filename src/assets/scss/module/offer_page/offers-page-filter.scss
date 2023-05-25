@@ -23,7 +23,7 @@
             display: block;
             width: 40px;
             height: auto;
-          
+
             &-wrapper {
                 display: block;
                 position: absolute;
@@ -40,14 +40,14 @@
         padding: 0;
         margin: 0;
         list-style-type: none;
-        
+
         // Анимация
         position: relative;
         transition: all 0.5s ease-out;
         height: 0;
 
         &--open {
-            height: 378px; 
+            height: 378px;
         }
     }
 
@@ -85,6 +85,10 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px;
+
+            &--open {
+                height: 230px;
+            }
         }
 
         &__item {
@@ -103,12 +107,42 @@
 
         &__wrapper {
             padding: 60px 30px;
+            padding-bottom: 30px;
+        }
+
+        &__title {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        &__search {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+
+            &-input {
+                display: none;
+                margin: 0;
+                max-width: 300px;
+                width: 30%;
+                flex-shrink: 0;
+                margin-right: 10px;
+            }
+
+            &-icon {
+                &-wrapper {
+                    right: unset;
+                    left: 260px;
+                    rotate: -90deg;
+                }
+            }
         }
 
         &__list {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            height: auto;
         }
 
         &__item {

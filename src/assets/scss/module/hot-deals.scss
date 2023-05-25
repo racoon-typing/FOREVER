@@ -90,7 +90,7 @@
             padding: 0;
             margin: 0;
             list-style-type: none;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         &-item {
@@ -130,7 +130,7 @@
     }
 
     &__links {
-        width: 38%;
+        width: 40%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -143,6 +143,11 @@
         background-color: unset;
         border: 1px solid $color-nine;
         color: $color-text-second;
+        background-color: $color-nine;
+        
+        & span {
+            letter-spacing: 1px;
+        }
 
         &:hover {
             background-color: $color-nine;
@@ -162,11 +167,12 @@
 
     &__price {
         padding: 15px 20px;
-        border: 1px solid $color-third;
+        border: 1px solid $color-nine;
         font-size: 14px;
         line-height: 1;
         color: $color-text-second;
         text-decoration: none;
+        font-weight: 500;
     }
 }
 
