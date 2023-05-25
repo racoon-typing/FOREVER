@@ -2,6 +2,7 @@
 const filterList = document.querySelector('.offers-page-filter__list');
 const filterItems = document.querySelectorAll('.offers-page-filter__item');
 const emptyItem = document.querySelector('.offers-page__empty');
+const selectText = document.querySelector('.offers-page-filter__search-input');
 
 const ALL = 'все предложения';
 
@@ -29,6 +30,11 @@ filterList.addEventListener('click', (evt) => {
         offerItem.forEach((el) => {
             el.classList.remove('offers-page__item--hidden');
         });
+
+
+        // Текст для селекта
+        const filterOptionText = evt.target.innerText;
+        selectText.textContent = filterOptionText;
 
         // Значение района для фильтрации 
         const filterOption = evt.target.innerText.toLowerCase();
@@ -96,4 +102,25 @@ filterList.addEventListener('click', (evt) => {
         myArr = [];
     }
 
+});
+
+
+// ========= ПопАп: Селект =========
+const selectNode = document.querySelector('.offers-page-filter__search');
+const arrowDown = document.querySelector('.offers-page-filter__search-icon-wrapper');
+let isOpen = false;
+
+selectNode.addEventListener('click', () => {
+    console.log('клик')
+
+
+    filterList.classList.toggle('offers-page-filter__list--open');
+
+    if (isOpen) {
+        arrowDown.style.rotate = '0deg';
+        isOpen = false;
+    } else {
+        arrowDown.style.rotate = '180deg';
+        isOpen = true;
+    }
 });
