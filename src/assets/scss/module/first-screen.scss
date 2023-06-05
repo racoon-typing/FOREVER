@@ -92,16 +92,6 @@
 
             &-wrapper {
                 display: none;
-                // display: flex;
-                // flex-direction: column;
-                // align-items: center;
-                // box-sizing: border-box;
-                // border: 1px solid #eeeff1;
-                // background-color: rgba(0, 0, 0, 0.4);
-                // -webkit-backdrop-filter: blur(3px);
-                // backdrop-filter: blur(3px);
-                // border-radius: 5%/50%;
-                // padding: 20px;
             }
         }
 
@@ -162,14 +152,9 @@
     .first-screen {
         background-image: url('../img/content/first-screen/bg-content-tablet-1.jpeg');
 
-        // &::before {
-        //     height: 76%;
-        // }
-
         &__wrapper {
             max-width: $tablet-width;
             padding: 0 30px;
-            // background-image: url('../img/content/first-screen/bg-content-tablet-1.jpeg');
         }
 
         &__content {
