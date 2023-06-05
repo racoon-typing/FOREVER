@@ -12,13 +12,16 @@ $phone = $_POST['phone'];
 $comment = $_POST['comment'];
 
 // Формирование самого письма
-$title = "Заявка с сайта";
+$title = "Заявка с сайта Forever";
 $body = "
 <h2>Новое письмо</h2>
 <b>Имя:</b> $name<br>
 <b>Телефон:</b> $phone<br>
-<b>Почта:</b> $email<br><br>
-<b>Сообщение:</b><br>$comment
+<b>Почта:</b> $email
+<br><br>
+<b>Сообщение:</b>
+<br>
+$comment
 ";
 
 // Настройки PHPMailer

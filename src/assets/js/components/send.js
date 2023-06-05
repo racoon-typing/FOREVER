@@ -1,5 +1,3 @@
-// const formNode = document.querySelectorAll('#form');
-
 // Отправка данных на сервер
 function send(event, php){
 // console.log("Отправка запроса");
@@ -8,7 +6,7 @@ var req = new XMLHttpRequest();
 req.open('POST', php, true);
 req.onload = function() {
 	if (req.status >= 200 && req.status < 400) {
-	json = JSON.parse(this.response); // Ебанный internet explorer 11
+	json = JSON.parse(this.response); // Internet explorer 11
     	// console.log(json);
         
     	// ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
@@ -34,7 +32,6 @@ req.onload = function() {
 // Если не удалось отправить запрос. Стоит блок на хостинге
 req.onerror = function() {
 	alert("Ошибка отправки запроса");
-
 };
 req.send(new FormData(event.target));
 }
